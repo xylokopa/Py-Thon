@@ -1,0 +1,4 @@
+https://raw.githubusercontent.com/pfaffelh/python_for_data/refs/heads/master/exam/exam_questions.md
+peter[dot]pfaffelhuber[at]stochastik[dot]uni-freiburg[dot]de
+Adeosun, Samuel Ayomide Raum 230/231 (Ernst-Zermelo-Str. 1)
+samuel.adeosun@stochastik.uni-freiburg.de
