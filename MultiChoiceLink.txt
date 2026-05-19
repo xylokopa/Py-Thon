@@ -6,7 +6,6 @@ Absender auf Github , Download Status 19.05.26 überprüft
 
 https://github.com/xylokopa/Py-Thon
 Gasthörer w178854g
-Roman Wurdack
 
 an
 peter.pfaffelhuber@stochastik.uni-freiburg.de
