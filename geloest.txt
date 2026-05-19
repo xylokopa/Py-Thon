@@ -1438,7 +1438,7 @@ Qa120. Given d = {"a": 1, "b": 2}, what does d["a"] return?
 -
 -
 -
-Qb121. Given d = {"a": 1, "b": 2}, what does list(d.keys()) return?
+Qa121. Given d = {"a": 1, "b": 2}, what does list(d.keys()) return?
 -
 - (a) ["a", "b"]
 - (b) [1, 2]
@@ -1474,7 +1474,7 @@ Qa123. Given d = {"a": 1, "b": 2}, what does list(d.items()) return?
 -
 -
 -
-Qa124. What is {x: x2 for x in range(4)}?
+Qa124. What is {x: x**2 for x in range(4)}?
 -
 - (a) {0: 0, 1: 1, 2: 4, 3: 9}
 - (b) [0, 1, 4, 9]

@@ -1474,7 +1474,7 @@ Q_123. Given d = {"a": 1, "b": 2}, what does list(d.items()) return?
 -
 -
 -
-Q_124. What is {x: x2 for x in range(4)}?
+Q_124. What is {x: x**2 for x in range(4)}?
 -
 - (a) {0: 0, 1: 1, 2: 4, 3: 9}
 - (b) [0, 1, 4, 9]

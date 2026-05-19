@@ -1,4 +1,14 @@
+Betr. Python-for-Data projekt-Terminiert auf 02.06.2026
+Überschrift : Quiz-Viewer in Python zur Vorlage exam_questions.md
 https://raw.githubusercontent.com/pfaffelh/python_for_data/refs/heads/master/exam/exam_questions.md
-peter[dot]pfaffelhuber[at]stochastik[dot]uni-freiburg[dot]de
+
+Absender auf Github , Download Status 19.05.26 überprüft
+
+https://github.com/xylokopa/Py-Thon
+Gasthörer w178854g
+Roman Wurdack
+
+an
+peter.pfaffelhuber@stochastik.uni-freiburg.de
 Adeosun, Samuel Ayomide Raum 230/231 (Ernst-Zermelo-Str. 1)
 samuel.adeosun@stochastik.uni-freiburg.de

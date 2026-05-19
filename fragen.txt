@@ -1,4 +1,4 @@
-Qb001. What is the type of the value 3.0 in Python?
+Q_001. What is the type of the value 3.0 in Python?
 -
 - (a) int
 - (b) float
@@ -10,7 +10,7 @@ Qb001. What is the type of the value 3.0 in Python?
 -
 -
 -
-Qb002. What does the expression 7 // 2 evaluate to?
+Q_002. What does the expression 7 // 2 evaluate to?
 -
 - (a) 3.5
 - (b) 3
@@ -22,7 +22,7 @@ Qb002. What does the expression 7 // 2 evaluate to?
 -
 -
 -
-Qb003. What does 7 % 3 evaluate to? 
+Q_003. What does 7 % 3 evaluate to? 
 -
 - (a) 2
 - (b) 1
@@ -34,7 +34,7 @@ Qb003. What does 7 % 3 evaluate to?
 -
 -
 -
-Qc004. What is the result of 2**10?
+Q_004. What is the result of 2**10?
 -
 - (a) 20
 - (b) 100
@@ -46,7 +46,7 @@ Qc004. What is the result of 2**10?
 -
 -
 -
-Qc005. Which of the following is True?
+Q_005. Which of the following is True?
 -
 - (a) True and False
 - (b) not (1 == 1)
@@ -58,7 +58,7 @@ Qc005. Which of the following is True?
 -
 -
 -
-Qb006. Let z = float("nan"). What is the value of z == z?
+Q_006. Let z = float("nan"). What is the value of z == z?
 -
 - (a) True
 - (b) False
@@ -70,7 +70,7 @@ Qb006. Let z = float("nan"). What is the value of z == z?
 -
 -
 -
-Qa007. What does "ab" * 3 evaluate to?
+Q_007. What does "ab" * 3 evaluate to?
 -
 - (a) "ababab"
 - (b) "ab ab ab"
@@ -82,7 +82,7 @@ Qa007. What does "ab" * 3 evaluate to?
 -
 -
 -
-Qb008. Let name = "Alice". Which expression produces the string "Hello, Alice!"?
+Q_008. Let name = "Alice". Which expression produces the string "Hello, Alice!"?
 -
 - (a) "Hello, name!"
 - (b) "Hello, " + name + "!"
@@ -94,7 +94,7 @@ Qb008. Let name = "Alice". Which expression produces the string "Hello, Alice!"?
 -
 -
 -
-Qa009. What is the value of "th" in "Python"?
+Q_009. What is the value of "th" in "Python"?
 -
 - (a) True
 - (b) False
@@ -106,7 +106,7 @@ Qa009. What is the value of "th" in "Python"?
 -
 -
 -
-Qb010. Which of the following is the correct way to check whether a variable x is None?
+Q_010. Which of the following is the correct way to check whether a variable x is None?
 -
 - (a) x == None
 - (b) x is None
@@ -118,7 +118,7 @@ Qb010. Which of the following is the correct way to check whether a variable x i
 -
 -
 -
-Qa011. What does the f-string f"{3.14159:.2f}" produce?
+Q_011. What does the f-string f"{3.14159:.2f}" produce?
 -
 - (a) "3.14"
 - (b) "3.14159"
@@ -130,7 +130,7 @@ Qa011. What does the f-string f"{3.14159:.2f}" produce?
 -
 -
 -
-Qc012. What is the value of int(3.8)?
+Q_012. What is the value of int(3.8)?
 -
 - (a) 4
 - (b) 3.8
@@ -142,7 +142,7 @@ Qc012. What is the value of int(3.8)?
 -
 -
 -
-Qc013. Which statement about Python integers is correct?
+Q_013. Which statement about Python integers is correct?
 -
 - (a) They are limited to 32 bits.
 - (b) They are limited to 64 bits.
@@ -154,7 +154,7 @@ Qc013. Which statement about Python integers is correct?
 -
 -
 -
-Qb014. What is the result of 10 / 4 in Python?
+Q_014. What is the result of 10 / 4 in Python?
 -
 - (a) 2
 - (b) 2.5
@@ -166,7 +166,7 @@ Qb014. What is the result of 10 / 4 in Python?
 -
 -
 -
-Qb015. What is the result of 10 / 2 in Python?
+Q_015. What is the result of 10 / 2 in Python?
 -
 - (a) 5
 - (b) 5.0
@@ -178,7 +178,7 @@ Qb015. What is the result of 10 / 2 in Python?
 -
 -
 -
-Qb016. What is the result of -7 // 2?
+Q_016. What is the result of -7 // 2?
 -
 - (a) -3
 - (b) -4
@@ -190,7 +190,7 @@ Qb016. What is the result of -7 // 2?
 -
 -
 -
-Qc017. What does abs(-5.5) return?
+Q_017. What does abs(-5.5) return?
 -
 - (a) -5.5
 - (b) 5
@@ -202,7 +202,7 @@ Qc017. What does abs(-5.5) return?
 -
 -
 -
-Qa018. What does round(3.14159, 2) return?
+Q_018. What does round(3.14159, 2) return?
 -
 - (a) 3.14
 - (b) 3.15
@@ -214,7 +214,7 @@ Qa018. What does round(3.14159, 2) return?
 -
 -
 -
-Qb019. What is 0.1 + 0.2 == 0.3 in Python?
+Q_019. What is 0.1 + 0.2 == 0.3 in Python?
 -
 - (a) True
 - (b) False
@@ -226,7 +226,7 @@ Qb019. What is 0.1 + 0.2 == 0.3 in Python?
 -
 -
 -
-Qb020. What does type(3 == 3) return?
+Q_020. What does type(3 == 3) return?
 -
 - (a) <class 'int'>
 - (b) <class 'bool'>
@@ -238,7 +238,7 @@ Qb020. What does type(3 == 3) return?
 -
 -
 -
-Qa021. What is the value of True + True + False?
+Q_021. What is the value of True + True + False?
 -
 - (a) 2
 - (b) True
@@ -250,7 +250,7 @@ Qa021. What is the value of True + True + False?
 -
 -
 -
-Qb022. What does bool(0) return?
+Q_022. What does bool(0) return?
 -
 - (a) True
 - (b) False
@@ -262,7 +262,7 @@ Qb022. What does bool(0) return?
 -
 -
 -
-Qb023. What does bool("") return?
+Q_023. What does bool("") return?
 -
 - (a) True
 - (b) False
@@ -274,7 +274,7 @@ Qb023. What does bool("") return?
 -
 -
 -
-Qb024. What does bool([]) return?
+Q_024. What does bool([]) return?
 -
 - (a) True
 - (b) False
@@ -286,7 +286,7 @@ Qb024. What does bool([]) return?
 -
 -
 -
-Qb025. Which expression evaluates to True?
+Q_025. Which expression evaluates to True?
 -
 - (a) 1 == "1"
 - (b) 1 == 1.0
@@ -298,7 +298,7 @@ Qb025. Which expression evaluates to True?
 -
 -
 -
-Qa026. What is the value of "Python"[0]?
+Q_026. What is the value of "Python"[0]?
 -
 - (a) "P"
 - (b) "y"
@@ -310,7 +310,7 @@ Qa026. What is the value of "Python"[0]?
 -
 -
 -
-Qb027. What is the value of "Python"[-1]?
+Q_027. What is the value of "Python"[-1]?
 -
 - (a) "P"
 - (b) "n"
@@ -322,7 +322,7 @@ Qb027. What is the value of "Python"[-1]?
 -
 -
 -
-Qb028. What is the value of "Python"[1:4]?
+Q_028. What is the value of "Python"[1:4]?
 -
 - (a) "Pyt"
 - (b) "yth"
@@ -334,7 +334,7 @@ Qb028. What is the value of "Python"[1:4]?
 -
 -
 -
-Qb029. What does len("Python") return?
+Q_029. What does len("Python") return?
 -
 - (a) 5
 - (b) 6
@@ -346,7 +346,7 @@ Qb029. What does len("Python") return?
 -
 -
 -
-Qb030. What does "hello".upper() return?
+Q_030. What does "hello".upper() return?
 -
 - (a) "hello"
 - (b) "HELLO"
@@ -358,7 +358,7 @@ Qb030. What does "hello".upper() return?
 -
 -
 -
-Qa031. What does "HELLO".lower() return?
+Q_031. What does "HELLO".lower() return?
 -
 - (a) "hello"
 - (b) "HELLO"
@@ -370,7 +370,7 @@ Qa031. What does "HELLO".lower() return?
 -
 -
 -
-Qa032. What does "  hello  ".strip() return?
+Q_032. What does "  hello  ".strip() return?
 -
 - (a) "hello"
 - (b) "  hello  "
@@ -382,7 +382,7 @@ Qa032. What does "  hello  ".strip() return?
 -
 -
 -
-Qb033. What does "a,b,c".split(",") return?
+Q_033. What does "a,b,c".split(",") return?
 -
 - (a) "a b c"
 - (b) ["a", "b", "c"]
@@ -394,7 +394,7 @@ Qb033. What does "a,b,c".split(",") return?
 -
 -
 -
-Qa034. What does ",".join(["a", "b", "c"]) return?
+Q_034. What does ",".join(["a", "b", "c"]) return?
 -
 - (a) "a,b,c"
 - (b) ["a,b,c"]
@@ -406,7 +406,7 @@ Qa034. What does ",".join(["a", "b", "c"]) return?
 -
 -
 -
-Qb035. What does "Python".replace("P", "J") return?
+Q_035. What does "Python".replace("P", "J") return?
 -
 - (a) "Python"
 - (b) "Jython"
@@ -418,7 +418,7 @@ Qb035. What does "Python".replace("P", "J") return?
 -
 -
 -
-Qb036. What does "Python".endswith("py") return?
+Q_036. What does "Python".endswith("py") return?
 -
 - (a) True
 - (b) False
@@ -430,7 +430,7 @@ Qb036. What does "Python".endswith("py") return?
 -
 -
 -
-Qa037. What does "abc".isalpha() return?
+Q_037. What does "abc".isalpha() return?
 -
 - (a) True
 - (b) False
@@ -442,7 +442,7 @@ Qa037. What does "abc".isalpha() return?
 -
 -
 -
-Qa038. What does "123".isdigit() return?
+Q_038. What does "123".isdigit() return?
 -
 - (a) True
 - (b) False
@@ -454,7 +454,7 @@ Qa038. What does "123".isdigit() return?
 -
 -
 -
-Qb039. What does str(42) return?
+Q_039. What does str(42) return?
 -
 - (a) 42
 - (b) "42"
@@ -466,7 +466,7 @@ Qb039. What does str(42) return?
 -
 -
 -
-Qb040. What does int("42") return?
+Q_040. What does int("42") return?
 -
 - (a) "42"
 - (b) 42
@@ -478,7 +478,7 @@ Qb040. What does int("42") return?
 -
 -
 -
-Qa041. What does float("3.14") return?
+Q_041. What does float("3.14") return?
 -
 - (a) 3.14
 - (b) "3.14"
@@ -490,7 +490,7 @@ Qa041. What does float("3.14") return?
 -
 -
 -
-Qc042. What does int(None) return?
+Q_042. What does int(None) return?
 -
 - (a) 0
 - (b) None
@@ -502,7 +502,7 @@ Qc042. What does int(None) return?
 -
 -
 -
-Qc043. Which of the following is NOT a valid Python variable name?
+Q_043. Which of the following is NOT a valid Python variable name?
 -
 - (a) my_var
 - (b) _x
@@ -514,7 +514,7 @@ Qc043. Which of the following is NOT a valid Python variable name?
 -
 -
 -
-Qa044. What does type(5) return?
+Q_044. What does type(5) return?
 -
 - (a) <class 'int'>
 - (b) <class 'float'>
@@ -526,7 +526,7 @@ Qa044. What does type(5) return?
 -
 -
 -
-Qb045. What is the result of not True?
+Q_045. What is the result of not True?
 -
 - (a) True
 - (b) False
@@ -538,7 +538,7 @@ Qb045. What is the result of not True?
 -
 -
 -
-Qb046. How many bits does a standard Python float use internally?
+Q_046. How many bits does a standard Python float use internally?
 -
 - (a) 32
 - (b) 64
@@ -550,7 +550,7 @@ Qb046. How many bits does a standard Python float use internally?
 -
 -
 -
-Qb047. In a float, which part stores the precision of the number?
+Q_047. In a float, which part stores the precision of the number?
 -
 - (a) the exponent
 - (b) the mantissa
@@ -562,7 +562,7 @@ Qb047. In a float, which part stores the precision of the number?
 -
 -
 -
-Qb048. What does range(5) represent?
+Q_048. What does range(5) represent?
 -
 - (a) The numbers 1, 2, 3, 4, 5
 - (b) The numbers 0, 1, 2, 3, 4
@@ -574,7 +574,7 @@ Qb048. What does range(5) represent?
 -
 -
 -
-Qa049. What does list(range(1, 10, 3)) evaluate to?
+Q_049. What does list(range(1, 10, 3)) evaluate to?
 -
 - (a) [1, 4, 7]
 - (b) [1, 4, 7, 10]
@@ -586,7 +586,7 @@ Qa049. What does list(range(1, 10, 3)) evaluate to?
 -
 -
 -
-Qc050. Which keyword immediately stops the execution of a for-loop?
+Q_050. Which keyword immediately stops the execution of a for-loop?
 -
 - (a) continue
 - (b) stop
@@ -598,7 +598,7 @@ Qc050. Which keyword immediately stops the execution of a for-loop?
 -
 -
 -
-Qb051. What is printed by the following code?
+Q_051. What is printed by the following code?
 python
 for i in range(4):
     if i == 2:
@@ -610,7 +610,7 @@ for i in range(4):
 - (c) 0 1
 - (d) 0 1 2
 -
-Qb052. Consider the function
+Q_052. Consider the function
 python
 def greeting(name, prefix="Hello"):
     print(f"{prefix}, {name}!")
@@ -622,7 +622,7 @@ Which call prints Hi, Bob!?
 - (c) greeting("Bob")
 - (d) greeting(prefix="Bob", name="Hi")
 -
-Qb053. What is a docstring?
+Q_053. What is a docstring?
 -
 - (a) A comment starting with Q_.
 - (b) A multiline string placed right after the def-line, describing what the function does.
@@ -634,7 +634,7 @@ Qb053. What is a docstring?
 -
 -
 -
-Qa054. Which of the following defines a valid lambda-function that squares its argument?
+Q_054. Which of the following defines a valid lambda-function that squares its argument?
 -
 - (a) lambda x: x**2
 - (b) lambda(x) = x^2
@@ -646,7 +646,7 @@ Qa054. Which of the following defines a valid lambda-function that squares its a
 -
 -
 -
-Qc055. Which exception is raised by int("abc")?
+Q_055. Which exception is raised by int("abc")?
 -
 - (a) TypeError
 - (b) NameError
@@ -658,7 +658,7 @@ Qc055. Which exception is raised by int("abc")?
 -
 -
 -
-Qd056. Which exception is raised by 1 / 0?
+Q_056. Which exception is raised by 1 / 0?
 -
 - (a) ValueError
 - (b) ArithmeticError
@@ -670,7 +670,7 @@ Qd056. Which exception is raised by 1 / 0?
 -
 -
 -
-Qb057. What is the purpose of the with statement when opening a file?
+Q_057. What is the purpose of the with statement when opening a file?
 -
 - (a) To speed up reading.
 - (b) To automatically close the file when the block ends.
@@ -682,7 +682,7 @@ Qb057. What is the purpose of the with statement when opening a file?
 -
 -
 -
-Qc058. Which mode opens a file for appending text at the end?
+Q_058. Which mode opens a file for appending text at the end?
 -
 - (a) "r"
 - (b) "w"
@@ -694,7 +694,7 @@ Qc058. Which mode opens a file for appending text at the end?
 -
 -
 -
-Qb059. What is the output of the following code?
+Q_059. What is the output of the following code?
 python
 res = 5 if 2 > 3 else 10
 print(res)
@@ -706,7 +706,7 @@ print(res)
 -
 -
 -
-Qb060. Inside a function, a variable is assigned a value. After the function returns, what happens 
+Q_060. Inside a function, a variable is assigned a value. After the function returns, what happens 
 -      to that variable (assuming no global or return)?
 -
 - (a) It keeps its new value outside the function.
@@ -718,7 +718,7 @@ Qb060. Inside a function, a variable is assigned a value. After the function ret
 -
 -
 -
-Qa061. What is the output of list(range(5, 0, -1))?
+Q_061. What is the output of list(range(5, 0, -1))?
 -
 - (a) [5, 4, 3, 2, 1]
 - (b) [5, 4, 3, 2, 1, 0]
@@ -730,7 +730,7 @@ Qa061. What is the output of list(range(5, 0, -1))?
 -
 -
 -
-Qb062. What is the output of list(range(3, 3))?
+Q_062. What is the output of list(range(3, 3))?
 -
 - (a) [3]
 - (b) []
@@ -742,7 +742,7 @@ Qb062. What is the output of list(range(3, 3))?
 -
 -
 -
-Qa063. What does the following code print?
+Q_063. What does the following code print?
 python
 i = 0
 while i < 3:
@@ -754,7 +754,7 @@ while i < 3:
 - (c) 1 2 3
 - (d) Infinite loop
 -
-Qb064. What does the following code print?
+Q_064. What does the following code print?
 python
 def f():
 ---return 1, 2, 3
@@ -766,7 +766,7 @@ print(type(x))
 - (c) <class 'int'>
 - (d) <class 'set'>
 -
-Qc065. A function without a return statement implicitly returns:
+Q_065. A function without a return statement implicitly returns:
 -
 - (a) 0
 - (b) False
@@ -778,7 +778,7 @@ Qc065. A function without a return statement implicitly returns:
 -
 -
 -
-Qb066. Consider the code:
+Q_066. Consider the code:
 python
 def add(a, b=1):
 ---return a + b
@@ -790,7 +790,7 @@ What is printed?
 - (c) Error: missing argument
 - (d) None
 -
-Qa067. What is the output of the following code?
+Q_067. What is the output of the following code?
 python
 x = 10
 def f():
@@ -802,7 +802,7 @@ print(x)
 - (b) 20
 - (c) Error
 - (d) None
-Qb068. What is a recursive function?
+Q_068. What is a recursive function?
 -
 - (a) A function that returns multiple values.
 - (b) A function that calls itself.
@@ -814,7 +814,7 @@ Qb068. What is a recursive function?
 -
 -
 -
-Qb069. What is list(filter(lambda x: x > 2, [1, 2, 3, 4]))?
+Q_069. What is list(filter(lambda x: x > 2, [1, 2, 3, 4]))?
 -
 - (a) [1, 2]
 - (b) [3, 4]
@@ -826,7 +826,7 @@ Qb069. What is list(filter(lambda x: x > 2, [1, 2, 3, 4]))?
 -
 -
 -
-Qb070. What does sorted([3, 1, 2], key=lambda x: -x) return?
+Q_070. What does sorted([3, 1, 2], key=lambda x: -x) return?
 -
 - (a) [1, 2, 3]
 - (b) [3, 2, 1]
@@ -838,7 +838,7 @@ Qb070. What does sorted([3, 1, 2], key=lambda x: -x) return?
 -
 -
 -
-Qb071. Which statement raises a custom exception?
+Q_071. Which statement raises a custom exception?
 -
 - (a) throw ValueError("bad")
 - (b) raise ValueError("bad")
@@ -850,7 +850,7 @@ Qb071. Which statement raises a custom exception?
 -
 -
 -
-Qb072. Which exception is raised by [1, 2, 3][10]?
+Q_072. Which exception is raised by [1, 2, 3][10]?
 -
 - (a) KeyError
 - (b) IndexError
@@ -862,7 +862,7 @@ Qb072. Which exception is raised by [1, 2, 3][10]?
 -
 -
 -
-Qa073. Which exception is raised by {"a": 1}["b"]?
+Q_073. Which exception is raised by {"a": 1}["b"]?
 -
 - (a) KeyError
 - (b) IndexError
@@ -874,7 +874,7 @@ Qa073. Which exception is raised by {"a": 1}["b"]?
 -
 -
 -
-Qb074. Which exception is raised when a file cannot be found?
+Q_074. Which exception is raised when a file cannot be found?
 -
 - (a) IOError
 - (b) FileNotFoundError
@@ -886,7 +886,7 @@ Qb074. Which exception is raised when a file cannot be found?
 -
 -
 -
-Qb075. Which file mode truncates the file if it already exists?
+Q_075. Which file mode truncates the file if it already exists?
 -
 - (a) "r"
 - (b) "w"
@@ -898,7 +898,7 @@ Qb075. Which file mode truncates the file if it already exists?
 -
 -
 -
-Qd076. Which file mode fails if the file already exists?
+Q_076. Which file mode fails if the file already exists?
 -
 - (a) "r"
 - (b) "w"
@@ -910,7 +910,7 @@ Qd076. Which file mode fails if the file already exists?
 -
 -
 -
-Qb077. What does f.readlines() return when called on a file object f?
+Q_077. What does f.readlines() return when called on a file object f?
 -
 - (a) A single string.
 - (b) A list of strings, one per line.
@@ -922,7 +922,7 @@ Qb077. What does f.readlines() return when called on a file object f?
 -
 -
 -
-Qa078. What is the output of the following code?
+Q_078. What is the output of the following code?
 python
 for i in range(3):
 ---for j in range(3):
@@ -934,7 +934,7 @@ for i in range(3):
 - (b) 0 1 2 . 0 1 2 . 0 1 2 . 
 - (c) 0 1 .
 - (d) 0 1
-Qb079. Which keyword is used to define a function in Python?
+Q_079. Which keyword is used to define a function in Python?
 -
 - (a) function
 - (b) def
@@ -946,7 +946,7 @@ Qb079. Which keyword is used to define a function in Python?
 -
 -
 -
-Qb080. What does match/case in Python (3.10+) implement?
+Q_080. What does match/case in Python (3.10+) implement?
 -
 - (a) A regex matcher.
 - (b) Structural pattern matching (similar to switch-case).
@@ -958,7 +958,7 @@ Qb080. What does match/case in Python (3.10+) implement?
 -
 -
 -
-Qa081. What is the output of the following code?
+Q_081. What is the output of the following code?
 python
 def f(n):
 ---if n <= 1:
@@ -970,7 +970,7 @@ print(f(4))
 - (b) 10
 - (c) 1
 - (d) Error
-Qa082. What is the value of sum([1, 2, 3, 4])?
+Q_082. What is the value of sum([1, 2, 3, 4])?
 -
 - (a) 10
 - (b) [1, 2, 3, 4]
@@ -982,7 +982,7 @@ Qa082. What is the value of sum([1, 2, 3, 4])?
 -
 -
 -
-Qb083. What happens when a while True: loop has no break?
+Q_083. What happens when a while True: loop has no break?
 -
 - (a) It runs once.
 - (b) It runs forever (infinite loop).
@@ -994,7 +994,7 @@ Qb083. What happens when a while True: loop has no break?
 -
 -
 -
-Qb084. Which statement is required to exit a function and return a value?
+Q_084. Which statement is required to exit a function and return a value?
 -
 - (a) exit
 - (b) return
@@ -1006,7 +1006,7 @@ Qb084. Which statement is required to exit a function and return a value?
 -
 -
 -
-Qb085. What is the output of:
+Q_085. What is the output of:
 python
 try:
 ---raise ValueError("bad")
@@ -1018,7 +1018,7 @@ except ValueError as e:
 - (c) None
 - (d) Error
 -
-Qb086. Given a = [10, 20, 30, 40, 50], what is a[1:4]?
+Q_086. Given a = [10, 20, 30, 40, 50], what is a[1:4]?
 -
 - (a) [10, 20, 30]
 - (b) [20, 30, 40]
@@ -1030,7 +1030,7 @@ Qb086. Given a = [10, 20, 30, 40, 50], what is a[1:4]?
 -
 -
 -
-Qb087. Given a = [10, 20, 30, 40], what is a[-1]?
+Q_087. Given a = [10, 20, 30, 40], what is a[-1]?
 -
 - (a) 10
 - (b) 40
@@ -1042,7 +1042,7 @@ Qb087. Given a = [10, 20, 30, 40], what is a[-1]?
 -
 -
 -
-Qd088. Which of the following is immutable?
+Q_088. Which of the following is immutable?
 -
 - (a) list
 - (b) dict
@@ -1054,7 +1054,7 @@ Qd088. Which of the following is immutable?
 -
 -
 -
-Qa089. What is len({1, 2, 2, 3, 3, 3})?
+Q_089. What is len({1, 2, 2, 3, 3, 3})?
 -
 - (a) 3
 - (b) 6
@@ -1066,7 +1066,7 @@ Qa089. What is len({1, 2, 2, 3, 3, 3})?
 -
 -
 -
-Qb090. Given s = {1, 2, 3} and t = {3, 4, 5}, what is s & t?
+Q_090. Given s = {1, 2, 3} and t = {3, 4, 5}, what is s & t?
 -
 - (a) {1, 2, 3, 4, 5}
 - (b) {3}
@@ -1078,7 +1078,7 @@ Qb090. Given s = {1, 2, 3} and t = {3, 4, 5}, what is s & t?
 -
 -
 -
-Qc091. Given l = [3, 1, 2], what does print(l.sort()) print?
+Q_091. Given l = [3, 1, 2], what does print(l.sort()) print?
 -
 - (a) [1, 2, 3]
 - (b) [3, 2, 1]
@@ -1090,7 +1090,7 @@ Qc091. Given l = [3, 1, 2], what does print(l.sort()) print?
 -
 -
 -
-Qb092. Which expression returns a new sorted list without changing the original list l?
+Q_092. Which expression returns a new sorted list without changing the original list l?
 -
 - (a) l.sort()
 - (b) sorted(l)
@@ -1102,7 +1102,7 @@ Qb092. Which expression returns a new sorted list without changing the original 
 -
 -
 -
-Qb093. Given d = {"a": 1, "b": 2}, what does d.get("c", 0) return?
+Q_093. Given d = {"a": 1, "b": 2}, what does d.get("c", 0) return?
 -
 - (a) None
 - (b) 0
@@ -1114,7 +1114,7 @@ Qb093. Given d = {"a": 1, "b": 2}, what does d.get("c", 0) return?
 -
 -
 -
-Qd094. Which of the following cannot be used as a dictionary key?
+Q_094. Which of the following cannot be used as a dictionary key?
 -
 - (a) "name"
 - (b) 42
@@ -1126,7 +1126,7 @@ Qd094. Which of the following cannot be used as a dictionary key?
 -
 -
 -
-Qb095. What does the following code print?
+Q_095. What does the following code print?
 python
 names = ["Alice", "Bob"]
 scores = [90, 80]
@@ -1138,7 +1138,7 @@ for n, s in zip(names, scores):
 - (c) ("Alice", 90) then ("Bob", 80)
 - (d) Error
 -
-Qa096. What does [x*x for x in range(4)] evaluate to?
+Q_096. What does [x*x for x in range(4)] evaluate to?
 -
 - (a) [0, 1, 4, 9]
 - (b) [1, 4, 9, 16]
@@ -1150,7 +1150,7 @@ Qa096. What does [x*x for x in range(4)] evaluate to?
 -
 -
 -
-Qb097. What does [x for x in range(10) if x % 2 == 0] evaluate to?
+Q_097. What does [x for x in range(10) if x % 2 == 0] evaluate to?
 -
 - (a) [1, 3, 5, 7, 9]
 - (b) [0, 2, 4, 6, 8]
@@ -1162,7 +1162,7 @@ Qb097. What does [x for x in range(10) if x % 2 == 0] evaluate to?
 -
 -
 -
-Qb098. Given l = [True, True, False], what does all(l) return?
+Q_098. Given l = [True, True, False], what does all(l) return?
 -
 - (a) True
 - (b) False
@@ -1174,7 +1174,7 @@ Qb098. Given l = [True, True, False], what does all(l) return?
 -
 -
 -
-Qb099. What does enumerate(["a", "b", "c"]) produce when iterated over?
+Q_099. What does enumerate(["a", "b", "c"]) produce when iterated over?
 -
 - (a) "a", "b", "c"
 - (b) (0, "a"), (1, "b"), (2, "c")
@@ -1186,7 +1186,7 @@ Qb099. What does enumerate(["a", "b", "c"]) produce when iterated over?
 -
 -
 -
-Qb100. What does the following code print?
+Q_100. What does the following code print?
 python
 l = [1, 2, 3]
 l.append([4, 5])
@@ -1198,7 +1198,7 @@ print(len(l))
 - (d) Error
 -
 -
-Qc101. What does the following code print?
+Q_101. What does the following code print?
 python
 l = [1, 2, 3]
 l.extend([4, 5])
@@ -1210,7 +1210,7 @@ print(len(l))
 - (d) Error
 -
 -
-Qb102. Given l = [1, 2, 3], what is l.pop()?
+Q_102. Given l = [1, 2, 3], what is l.pop()?
 -
 - (a) 1
 - (b) 3
@@ -1222,7 +1222,7 @@ Qb102. Given l = [1, 2, 3], what is l.pop()?
 -
 -
 -
-Qa103. Given l = [10, 20, 30], what is l.pop(0)?
+Q_103. Given l = [10, 20, 30], what is l.pop(0)?
 -
 - (a) 10
 - (b) 30
@@ -1234,7 +1234,7 @@ Qa103. Given l = [10, 20, 30], what is l.pop(0)?
 -
 -
 -
-Qb104. Given l = [1, 2, 3, 2], what does l.remove(2) do?
+Q_104. Given l = [1, 2, 3, 2], what does l.remove(2) do?
 -
 - (a) Removes all 2s.
 - (b) Removes the first 2.
@@ -1246,7 +1246,7 @@ Qb104. Given l = [1, 2, 3, 2], what does l.remove(2) do?
 -
 -
 -
-Qb105. Given l = [1, 2, 3], what is l.index(2)?
+Q_105. Given l = [1, 2, 3], what is l.index(2)?
 -
 - (a) 0
 - (b) 1
@@ -1258,7 +1258,7 @@ Qb105. Given l = [1, 2, 3], what is l.index(2)?
 -
 -
 -
-Qc106. Given l = [1, 2, 2, 3, 2], what is l.count(2)?
+Q_106. Given l = [1, 2, 2, 3, 2], what is l.count(2)?
 -
 - (a) 1
 - (b) 2
@@ -1270,7 +1270,7 @@ Qc106. Given l = [1, 2, 2, 3, 2], what is l.count(2)?
 -
 -
 -
-Qa107. What does the following code print?
+Q_107. What does the following code print?
 python
 l = [1, 2, 3]
 l.insert(1, 99)
@@ -1282,7 +1282,7 @@ print(l)
 - (d) [1, 2, 99, 3]
 -
 -
-Qc108. Given l = [1, 2, 3], what does l.reverse() return?
+Q_108. Given l = [1, 2, 3], what does l.reverse() return?
 -
 - (a) [3, 2, 1]
 - (b) [1, 2, 3]
@@ -1294,7 +1294,7 @@ Qc108. Given l = [1, 2, 3], what does l.reverse() return?
 -
 -
 -
-Qa109. What is the value of [1, 2] + [3, 4]?
+Q_109. What is the value of [1, 2] + [3, 4]?
 -
 - (a) [1, 2, 3, 4]
 - (b) [4, 6]
@@ -1306,7 +1306,7 @@ Qa109. What is the value of [1, 2] + [3, 4]?
 -
 -
 -
-Qa110. What is "hello"[::2]?
+Q_110. What is "hello"[::2]?
 -
 - (a) "hlo"
 - (b) "hello"
@@ -1318,7 +1318,7 @@ Qa110. What is "hello"[::2]?
 -
 -
 -
-Qa111. What does 3 in [1, 2, 3] return?
+Q_111. What does 3 in [1, 2, 3] return?
 -
 - (a) True
 - (b) False
@@ -1330,7 +1330,7 @@ Qa111. What does 3 in [1, 2, 3] return?
 -
 -
 -
-Qb112. Given the assignment a, b = (1, 2), what is b?
+Q_112. Given the assignment a, b = (1, 2), what is b?
 -
 - (a) 1
 - (b) 2
@@ -1342,7 +1342,7 @@ Qb112. Given the assignment a, b = (1, 2), what is b?
 -
 -
 -
-Qb113. What does the assignment a, b = b, a do?
+Q_113. What does the assignment a, b = b, a do?
 -
 - (a) Sets a and b both to None.
 - (b) Swaps the values of a and b.
@@ -1354,7 +1354,7 @@ Qb113. What does the assignment a, b = b, a do?
 -
 -
 -
-Qc114. Which of the following creates a tuple with a single element 5?
+Q_114. Which of the following creates a tuple with a single element 5?
 -
 - (a) (5)
 - (b) [5]
@@ -1366,7 +1366,7 @@ Qc114. Which of the following creates a tuple with a single element 5?
 -
 -
 -
-Qb115. What is () in Python?
+Q_115. What is () in Python?
 -
 - (a) An empty list
 - (b) An empty tuple
@@ -1378,7 +1378,7 @@ Qb115. What is () in Python?
 -
 -
 -
-Qb116. What is {} in Python?
+Q_116. What is {} in Python?
 -
 - (a) An empty set
 - (b) An empty dictionary
@@ -1390,7 +1390,7 @@ Qb116. What is {} in Python?
 -
 -
 -
-Qc117. How can you create an empty set in Python?
+Q_117. How can you create an empty set in Python?
 -
 - (a) {}
 - (b) []
@@ -1402,7 +1402,7 @@ Qc117. How can you create an empty set in Python?
 -
 -
 -
-Qb118. Given s = {1, 2, 3} and t = {3, 4}, what is s | t?
+Q_118. Given s = {1, 2, 3} and t = {3, 4}, what is s | t?
 -
 - (a) {3}
 - (b) {1, 2, 3, 4}
@@ -1414,7 +1414,7 @@ Qb118. Given s = {1, 2, 3} and t = {3, 4}, what is s | t?
 -
 -
 -
-Qa119. Given s = {1, 2, 3} and t = {3, 4}, what is s - t?
+Q_119. Given s = {1, 2, 3} and t = {3, 4}, what is s - t?
 -
 - (a) {1, 2}
 - (b) {3}
@@ -1426,7 +1426,7 @@ Qa119. Given s = {1, 2, 3} and t = {3, 4}, what is s - t?
 -
 -
 -
-Qa120. Given d = {"a": 1, "b": 2}, what does d["a"] return?
+Q_120. Given d = {"a": 1, "b": 2}, what does d["a"] return?
 -
 - (a) 1
 - (b) "a"
@@ -1438,7 +1438,7 @@ Qa120. Given d = {"a": 1, "b": 2}, what does d["a"] return?
 -
 -
 -
-Qb121. Given d = {"a": 1, "b": 2}, what does list(d.keys()) return?
+Q_121. Given d = {"a": 1, "b": 2}, what does list(d.keys()) return?
 -
 - (a) ["a", "b"]
 - (b) [1, 2]
@@ -1450,7 +1450,7 @@ Qb121. Given d = {"a": 1, "b": 2}, what does list(d.keys()) return?
 -
 -
 -
-Qb122. Given d = {"a": 1, "b": 2}, what does list(d.values()) return?
+Q_122. Given d = {"a": 1, "b": 2}, what does list(d.values()) return?
 -
 - (a) ["a", "b"]
 - (b) [1, 2]
@@ -1462,7 +1462,7 @@ Qb122. Given d = {"a": 1, "b": 2}, what does list(d.values()) return?
 -
 -
 -
-Qa123. Given d = {"a": 1, "b": 2}, what does list(d.items()) return?
+Q_123. Given d = {"a": 1, "b": 2}, what does list(d.items()) return?
 -
 - (a) [("a", 1), ("b", 2)]
 - (b) ["a", 1, "b", 2]
@@ -1474,7 +1474,7 @@ Qa123. Given d = {"a": 1, "b": 2}, what does list(d.items()) return?
 -
 -
 -
-Qa124. What is {x: x2 for x in range(4)}?
+Q_124. What is {x: x**2 for x in range(4)}?
 -
 - (a) {0: 0, 1: 1, 2: 4, 3: 9}
 - (b) [0, 1, 4, 9]
@@ -1486,7 +1486,7 @@ Qa124. What is {x: x2 for x in range(4)}?
 -
 -
 -
-Qb125. What does d.update({"c": 3}) do to the dictionary d?
+Q_125. What does d.update({"c": 3}) do to the dictionary d?
 -
 - (a) Replaces d entirely with {"c": 3}.
 - (b) Adds or updates the key "c" in d.
@@ -1498,7 +1498,7 @@ Qb125. What does d.update({"c": 3}) do to the dictionary d?
 -
 -
 -
-Qb126. What does del d["a"] do?
+Q_126. What does del d["a"] do?
 -
 - (a) Deletes the value "a" from any key in d.
 - (b) Removes the key "a" (and its value) from d.
@@ -1510,7 +1510,7 @@ Qb126. What does del d["a"] do?
 -
 -
 -
-Qb127. What does any([False, 0, None, ""]) return?
+Q_127. What does any([False, 0, None, ""]) return?
 -
 - (a) True
 - (b) False
@@ -1522,7 +1522,7 @@ Qb127. What does any([False, 0, None, ""]) return?
 -
 -
 -
-Qa128. What does min([3, 1, 2, 5]) return?
+Q_128. What does min([3, 1, 2, 5]) return?
 -
 - (a) 1
 - (b) 3
@@ -1534,7 +1534,7 @@ Qa128. What does min([3, 1, 2, 5]) return?
 -
 -
 -
-Qb129. What does sorted(["banana", "pie", "apple"], key=len) return?
+Q_129. What does sorted(["banana", "pie", "apple"], key=len) return?
 -
 - (a) ["apple", "banana", "pie"]
 - (b) ["pie", "apple", "banana"]
@@ -1546,7 +1546,7 @@ Qb129. What does sorted(["banana", "pie", "apple"], key=len) return?
 -
 -
 -
-Qa130. What does the following code print?
+Q_130. What does the following code print?
 python
 d = {"a": [1, 2], "b": [3, 4]}
 for k, v in d.items():
@@ -1558,7 +1558,7 @@ for k, v in d.items():
 - (d) Error
 -
 -
-Qb131. Given t = (1, 2, 3), what does t[0] = 10 do?
+Q_131. Given t = (1, 2, 3), what does t[0] = 10 do?
 -
 - (a) Changes the first element to 10.
 - (b) Raises TypeError: tuples are immutable.
@@ -1570,7 +1570,7 @@ Qb131. Given t = (1, 2, 3), what does t[0] = 10 do?
 -
 -
 -
-Qa132. What does set([1, 2, 2, 3]) return?
+Q_132. What does set([1, 2, 2, 3]) return?
 -
 - (a) {1, 2, 3}
 - (b) [1, 2, 3]
@@ -1582,7 +1582,7 @@ Qa132. What does set([1, 2, 2, 3]) return?
 -
 -
 -
-Qb133. Which expression returns the elements at even indices (0, 2, 4, ...) of a list l?
+Q_133. Which expression returns the elements at even indices (0, 2, 4, ...) of a list l?
 -
 - (a) l[1::2]
 - (b) l[::2]
@@ -1594,7 +1594,7 @@ Qb133. Which expression returns the elements at even indices (0, 2, 4, ...) of a
 -
 -
 -
-Qc134. Given matrix = [[1, 2], [3, 4], [5, 6]], what is matrix[1][0]?
+Q_134. Given matrix = [[1, 2], [3, 4], [5, 6]], what is matrix[1][0]?
 -
 - (a) 1
 - (b) 2
@@ -1606,7 +1606,7 @@ Qc134. Given matrix = [[1, 2], [3, 4], [5, 6]], what is matrix[1][0]?
 -
 -
 -
-Qa135. What does "".join(["a", "b", "c"]) return?
+Q_135. What does "".join(["a", "b", "c"]) return?
 -
 - (a) "abc"
 - (b) "a, b, c"
@@ -1618,7 +1618,7 @@ Qa135. What does "".join(["a", "b", "c"]) return?
 -
 -
 -
-Qc136. Suppose one.py contains a function myConst(). 
+Q_136. Suppose one.py contains a function myConst(). 
 - In two.py, which import statement lets you call it as myConst()
 - (without a prefix)?
 -
@@ -1630,7 +1630,7 @@ Qc136. Suppose one.py contains a function myConst().
 -
 -
 -
-Qc137. Which import gives you access to math.pi?
+Q_137. Which import gives you access to math.pi?
 -
 - (a) import pi
 - (b) from math import * only
@@ -1642,7 +1642,7 @@ Qc137. Which import gives you access to math.pi?
 -
 -
 -
-Qb138. You have a string "21.4.26, 12:15" and want to convert it 
+Q_138. You have a string "21.4.26, 12:15" and want to convert it 
 -      into a datetime object.
 -      Which function do you use? 
 - Assume that the datetime module has been imported.
@@ -1654,7 +1654,7 @@ Qb138. You have a string "21.4.26, 12:15" and want to convert it
 -
 -
 -
-Qb139. Given a datetime object dt, how do you get the date exactly 7 days later? 
+Q_139. Given a datetime object dt, how do you get the date exactly 7 days later? 
 - Assume that the datetime module has been imported.
 -
 - (a) dt + 7
@@ -1666,7 +1666,7 @@ Qb139. Given a datetime object dt, how do you get the date exactly 7 days later?
 -
 -
 -
-Qa140. Why does Decimal('0.1') + Decimal('0.2') give an exact result, 
+Q_140. Why does Decimal('0.1') + Decimal('0.2') give an exact result, 
 -      but 0.1 + 0.2 does not?
 - Assume that Decimal has been imported from the decimal module.
 -
@@ -1678,7 +1678,7 @@ Qa140. Why does Decimal('0.1') + Decimal('0.2') give an exact result,
 -
 -
 -
-Qc141. Which library is used to find patterns like email addresses in a string?
+Q_141. Which library is used to find patterns like email addresses in a string?
 -
 - (a) os
 - (b) pickle
@@ -1690,7 +1690,7 @@ Qc141. Which library is used to find patterns like email addresses in a string?
 -
 -
 -
-Qb142. What is the purpose of the pickle library?
+Q_142. What is the purpose of the pickle library?
 -
 - (a) Handling dates and times.
 - (b) Serializing Python objects to a file and loading them back.
@@ -1702,7 +1702,7 @@ Qb142. What is the purpose of the pickle library?
 -
 -
 -
-Qc143. What does assert 2 + 2 == 5 do when executed?
+Q_143. What does assert 2 + 2 == 5 do when executed?
 -
 - (a) Nothing; the line is silently ignored.
 - (b) It prints False.
@@ -1714,7 +1714,7 @@ Qc143. What does assert 2 + 2 == 5 do when executed?
 -
 -
 -
-Qb144. What does math.sqrt(16) return? 
+Q_144. What does math.sqrt(16) return? 
 - Assume that the math module has been imported.
 -
 - (a) 4
@@ -1726,7 +1726,7 @@ Qb144. What does math.sqrt(16) return?
 -
 -
 -
-Qa145. What is the approximate value of math.e? 
+Q_145. What is the approximate value of math.e? 
 - Assume that the math module has been imported.
 -
 - (a) 2.718
@@ -1738,7 +1738,7 @@ Qa145. What is the approximate value of math.e?
 -
 -
 -
-Qb146. What does math.log(math.e) return? 
+Q_146. What does math.log(math.e) return? 
 - Assume that the math module has been imported.
 -
 - (a) 0
@@ -1750,7 +1750,7 @@ Qb146. What does math.log(math.e) return?
 -
 -
 -
-Qb147. What does math.sin(math.pi / 2) return? 
+Q_147. What does math.sin(math.pi / 2) return? 
 - Assume that the math module has been imported.
 -
 - (a) 0.0
@@ -1762,7 +1762,7 @@ Qb147. What does math.sin(math.pi / 2) return?
 -
 -
 -
-Qa148. Given dt = datetime.datetime(2026, 3, 27, 12, 0), 
+Q_148. Given dt = datetime.datetime(2026, 3, 27, 12, 0), 
 - what does dt.strftime("%Y-%m-%d") return? 
 - Assume that the datetime module has been imported.
 -
@@ -1774,7 +1774,7 @@ Qa148. Given dt = datetime.datetime(2026, 3, 27, 12, 0),
 -
 -
 -
-Qb149. Given two datetime objects a and b, what is the type of a - b? 
+Q_149. Given two datetime objects a and b, what is the type of a - b? 
 - Assume that the datetime module has been imported.
 -
 - (a) datetime
@@ -1786,7 +1786,7 @@ Qb149. Given two datetime objects a and b, what is the type of a - b?
 -
 -
 -
-Qc150. Which of the following is a regex module function 
+Q_150. Which of the following is a regex module function 
 -      that finds ALL non-overlapping matches? 
 - Assume that the re module has been imported.
 -
@@ -1798,7 +1798,7 @@ Qc150. Which of the following is a regex module function
 -
 -
 -
-Qa151. Which module provides operating-system-level functionality 
+Q_151. Which module provides operating-system-level functionality 
 -      like listing directory contents?
 -
 - (a) os
@@ -1810,7 +1810,7 @@ Qa151. Which module provides operating-system-level functionality
 -
 -
 -
-Qa152. What does pickle.dump(obj, f) do? 
+Q_152. What does pickle.dump(obj, f) do? 
 - Assume that the pickle module has been imported.
 -
 - (a) Writes obj to the open binary file f.
@@ -1822,7 +1822,7 @@ Qa152. What does pickle.dump(obj, f) do?
 -
 -
 -
-Qc153. What does int("101", 2) return? 
+Q_153. What does int("101", 2) return? 
 -
 - (a) ValueError
 - (b) None
@@ -1834,7 +1834,7 @@ Qc153. What does int("101", 2) return?
 -
 -
 -
-Qa154. What does int("abc", 2) return? 
+Q_154. What does int("abc", 2) return? 
 -
 - (a) ValueError
 - (b) None
@@ -1846,7 +1846,7 @@ Qa154. What does int("abc", 2) return?
 -
 -
 -
-Qb155. What does int("abc", 16) return? 
+Q_155. What does int("abc", 16) return? 
 -
 - (a) 101112
 - (b) 2748
@@ -1857,6 +1857,3 @@ Qb155. What does int("abc", 16) return?
 -
 -
 -
-
-
-
