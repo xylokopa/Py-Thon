@@ -5,7 +5,7 @@ import random
 
 def load_data(fragen_file, antworten_file):
     questions = []
-    start_zeile = 99
+    start_zeile = 1
     try:
         with open(fragen_file, 'r', encoding='utf-8') as f:
             lines = [line.strip() for line in f if line.strip()]
