@@ -126,7 +126,7 @@ class QuizViewer:
             # 0. GROSSSCHRIFT Redraw the canvas to see the update
             self.ax.figure.canvas.draw_idle()            
         if self.level == 1:
-            self.load_index = 0
+            self.load_index = 1
             self.startzeile = 1
             self.reload_data(self)
             self.current_pool = self.quiz_data[:self.num_to_pick]
