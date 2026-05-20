@@ -1,6 +1,6 @@
-# Quiz-Viewer_15.py 20-05-26 Idee R.Wurdack Script Google-Gemini
+# Quiz-Viewer_15.py 20-05-26 Idee R.Wurdack 200_Zeilen-Script Google-Gemini
 import matplotlib.pyplot as plt
-from matplotlib.widgets import Button
+from matplotlib.widgets import TextBox, Button
 import random
 #-------------------Start-Bedingungen----------------------------
 load_index = 0     # 0: Learn-Modus mit Loesung  1: Quiz-Modus
@@ -25,21 +25,17 @@ class QuizViewer:
         self.quiz_data = quiz_data
         self.load_index = load_index
         self.startzeile = startzeile
-        
         self.num_to_pick = min(len(quiz_data), 155)      # 152
         self.level = 0 # 0,1=Geloest, 2=Zufall, 3=Streng, 4=Kein Zurück!
-        
         self.index = 0
         self.guess = "?"
         self.show_answer = False
         self.score = 0
         self.answered_ids = set()
         self.current_pool = []
-
         self.fig, self.ax = plt.subplots(figsize=(11, 5.5)) # 11,8
         plt.subplots_adjust(left=0.2, bottom=0.25)
         self.ax.axis('off')
-
         self.txt_q = self.ax.text(0.05, 0.99, "", va='top', fontsize=11, family='monospace')
         self.txt_feedback1 = self.ax.text(0.75, 0.01, "", va='top', fontsize=12, fontweight='bold')
         self.txt_feedback2 = self.ax.text(0.75, 0.99, "", va='top', fontsize=12, fontweight='bold')       
@@ -58,16 +54,38 @@ class QuizViewer:
         self.btn_num = Button(plt.axes([0.05, 0.40, 0.14, 0.06]), f'Anzahl: {self.num_to_pick}')
         self.lvl_txt = ["tafel","geloest","zufall","streng","kein zurueck"]
         self.btn_lvl = Button(plt.axes([0.05, 0.33, 0.14, 0.06]), f'Modus:{self.lvl_txt[self.level]}')
-
         self.btn_next = Button(plt.axes([0.15, 0.50, 0.04, 0.22]), '>>')
-
+        ax_box = self.fig.add_axes([0.05, 0.20, 0.10, 0.06])
+        self.text_box = TextBox(ax_box, '', initial=str(startzeile))
+        self.text_box.label.set_text('Startzeile:')
+        self.text_box.label.set_position((0.75, 1.3))
+        ax_btn = self.fig.add_axes([0.16, 0.20, 0.03, 0.06])
+        self.btn_submit = Button(ax_btn, 'OK')
+        self.text_box.on_submit(self.zeilen_eingabe) # submit-trigger
+        self.btn_submit.on_clicked(self.eingabe_absenden)
         self.btn_prev.on_clicked(lambda x: self.move(-1))
         self.btn_next.on_clicked(lambda x: self.move(1))
         self.btn_num.on_clicked(self.toggle_num)
         self.btn_lvl.on_clicked(self.toggle_level)
-
         self.reset_quiz()
         plt.show()
+
+    def zeilen_eingabe(self, text):
+        try:
+            wert = int(text)
+            # Prüfen, ob die Zahl im erlaubten Bereich liegt
+            if 1 <= wert <= 155:
+                self.startzeile = wert
+                self.reload_data(self)
+                print(self.startzeile)
+            else:
+                raise ValueError("Zahl außerhalb des Bereichs.")
+        except ValueError:
+            self.startzeile = 1
+        plt.draw()
+    def eingabe_absenden(self, event):
+           """Absenden, falls User nicht Enter drückt."""
+           self.zeilen_eingabe(self.text_box.text)     
 
     def reload_data(self, *args):
         # 1. Daten neu aus der Datei laden
@@ -99,8 +117,7 @@ class QuizViewer:
     def reset_quiz(self):
         self.score = 0
         self.answered_ids = set()
-        self.index = 0
-        
+        self.index = 0       
         if self.level == 0:
             self.load_index = 0
             self.startzeile = 1
@@ -130,7 +147,6 @@ class QuizViewer:
             temp_pool = list(self.quiz_data)
             random.shuffle(temp_pool)
             self.current_pool = temp_pool[:self.num_to_pick]
-            
         self.update_display()
 
     def make_guess(self, label):
@@ -147,10 +163,8 @@ class QuizViewer:
         item = self.current_pool[self.index]
         lvl_names = ["Tafel_0","Geloest_1", "Zufall_2", "Streng_3", "KEIN ZURUECK!_4"]
         mode_text = lvl_names[self.level]
-        
         self.txt_q.set_text(f"Modus: {mode_text} | Frage {self.index+1}/{len(self.current_pool)}\n\n" + "\n".join(item['q_lines']))
         self.txt_score.set_text(f"ERGEBNIS: {self.score} von {len(self.current_pool)} richtig")
-        
         # Zurück-Button ausgrauen/sperren in Stufe 4
         if self.level == 4:
             self.btn_prev.ax.set_facecolor('gray')
@@ -158,7 +172,6 @@ class QuizViewer:
         else:
             self.btn_prev.ax.set_facecolor('0.85')
             self.btn_prev.label.set_color('black')
-
         if self.show_answer:
             correct = item['a'].split('.')[-1].strip().lower()
             is_correct = self.guess.lower() == correct
@@ -173,7 +186,6 @@ class QuizViewer:
         # In Stufe 4 blockieren wir den Rückwärtsschritt
         if self.level == 4 and step < 0:
             return 
-            
         if len(self.current_pool) > 0:
             self.index = (self.index + step) % len(self.current_pool)
             self.guess, self.show_answer = "?", False
