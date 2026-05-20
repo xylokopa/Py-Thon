@@ -12,8 +12,8 @@ def load_data(fragen_file, antworten_file,start_zeile):
         with open(fragen_file, 'r', encoding='utf-8') as f:
             lines = [line.strip() for line in f if line.strip()]
             lines = lines[(start_zeile-1)*12:]            
-        for i in range(0, len(lines), 12):                      # 5
-            questions.append(lines[i:i+12])                     # 5
+        for i in range(0, len(lines), 12):                      
+            questions.append(lines[i:i+12])                     
         with open(antworten_file, 'r', encoding='utf-8') as f:
             answers = [line.strip() for line in f if line.strip()]
             answers = answers[(start_zeile-1):]
@@ -33,33 +33,32 @@ class QuizViewer:
         self.score = 0
         self.answered_ids = set()
         self.current_pool = []
-        self.fig, self.ax = plt.subplots(figsize=(11, 5.5)) # 11,8
-        plt.subplots_adjust(left=0.2, bottom=0.25)
+        self.fig, self.ax = plt.subplots(figsize=(11, 5.5)) 
+        plt.subplots_adjust(left=0.01, bottom=0.05)                                                                #00
         self.ax.axis('off')
-        self.txt_q = self.ax.text(0.05, 0.99, "", va='top', fontsize=11, family='monospace')
-        self.txt_feedback1 = self.ax.text(0.75, 0.01, "", va='top', fontsize=12, fontweight='bold')
-        self.txt_feedback2 = self.ax.text(0.75, 0.99, "", va='top', fontsize=12, fontweight='bold')       
-        self.txt_score = self.ax.text(0.05, 0.00, "", va='top', fontsize=13, color='darkblue', fontweight='black')
-
+        self.txt_q = self.ax.text(0.01, 0.99, "", va='top', fontsize=11, family='monospace')
+        self.txt_feedback1 = self.ax.text(0.20, 0.11, "", va='top', fontsize=12, fontweight='bold')                #01
+        self.txt_feedback2 = self.ax.text(0.20, 0.16, "", va='top', fontsize=12, fontweight='bold')                #02
+        self.txt_score1 = self.ax.text(0.01, 0.06, "", va='top', fontsize=13, color='darkblue', fontweight='black')#03
+        self.txt_score2 = self.ax.text(0.01, 0.01, "", va='top', fontsize=13, color='darkblue', fontweight='black')#04
         # Antwort-Buttons
         self.btn_choices = []
         for i, label in enumerate(['a', 'b', 'c', 'd']):
-            ax_c = plt.axes([0.10, 0.675 - (i * 0.06), 0.04, 0.05]) # 0.05
+            ax_c = plt.axes([0.635, 0.185 - (i * 0.06), 0.04, 0.05])                                               #05
             btn = Button(ax_c, label)
             btn.on_clicked(lambda e, l=label: self.make_guess(l))
             self.btn_choices.append(btn)
-
         # Navigation mit Buttons
-        self.btn_prev = Button(plt.axes([0.05, 0.50, 0.04, 0.22]), '<<')   
-        self.btn_num = Button(plt.axes([0.05, 0.40, 0.14, 0.06]), f'Anzahl: {self.num_to_pick}')
+        self.btn_prev = Button(plt.axes([0.55, 0.052, 0.07, 0.132]), '<<')                                         #06
+        self.btn_num = Button(plt.axes([0.40, 0.122, 0.14, 0.06]), f'Anzahl: {self.num_to_pick}')                  #07
         self.lvl_txt = ["tafel","geloest","zufall","streng","kein zurueck"]
-        self.btn_lvl = Button(plt.axes([0.05, 0.33, 0.14, 0.06]), f'Modus:{self.lvl_txt[self.level]}')
-        self.btn_next = Button(plt.axes([0.15, 0.50, 0.04, 0.22]), '>>')
-        ax_box = self.fig.add_axes([0.05, 0.20, 0.10, 0.06])
+        self.btn_lvl = Button(plt.axes([0.40, 0.055, 0.14, 0.06]), f'Modus:{self.lvl_txt[self.level]}')            #08
+        self.btn_next = Button(plt.axes([0.69, 0.052, 0.07, 0.132]), '>>')                                         #09
+        ax_box = self.fig.add_axes([0.01, 0.11, 0.10, 0.06])                                                       #10
         self.text_box = TextBox(ax_box, '', initial=str(startzeile))
         self.text_box.label.set_text('Startzeile:')
-        self.text_box.label.set_position((0.75, 1.3))
-        ax_btn = self.fig.add_axes([0.16, 0.20, 0.03, 0.06])
+        self.text_box.label.set_position((1.3, 1.3))
+        ax_btn = self.fig.add_axes([0.12, 0.11, 0.03, 0.06])                                                       #11
         self.btn_submit = Button(ax_btn, 'OK')
         self.text_box.on_submit(self.zeilen_eingabe) # submit-trigger
         self.btn_submit.on_clicked(self.eingabe_absenden)
@@ -164,7 +163,8 @@ class QuizViewer:
         lvl_names = ["Tafel_0","Geloest_1", "Zufall_2", "Streng_3", "KEIN ZURUECK!_4"]
         mode_text = lvl_names[self.level]
         self.txt_q.set_text(f"Modus: {mode_text} | Frage {self.index+1}/{len(self.current_pool)}\n\n" + "\n".join(item['q_lines']))
-        self.txt_score.set_text(f"ERGEBNIS: {self.score} von {len(self.current_pool)} richtig")
+        self.txt_score1.set_text(f"richtig:")
+        self.txt_score2.set_text(f"{self.score} von {len(self.current_pool)}")
         # Zurück-Button ausgrauen/sperren in Stufe 4
         if self.level == 4:
             self.btn_prev.ax.set_facecolor('gray')
