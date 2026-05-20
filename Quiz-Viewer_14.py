@@ -3,12 +3,11 @@ import matplotlib.pyplot as plt
 from matplotlib.widgets import Button
 import random
 #-------------------Start-Bedingungen----------------------------
-load_index = 0      # 0: Learn-Modus mit Loesung  1: Quiz-Modus
-startzeile = 11     # Verschiebbarer Zeiger auf die erste Frage 
+load_index = 0     # 0: Learn-Modus mit Loesung  1: Quiz-Modus
+startzeile = 1     # Verschiebbarer Zeiger auf die erste Frage 
 #-------------------Quiz-Ablauf---------------------------------
 def load_data(fragen_file, antworten_file,start_zeile):
     questions = []
-    #start_zeile = 1
     try:
         with open(fragen_file, 'r', encoding='utf-8') as f:
             lines = [line.strip() for line in f if line.strip()]
