@@ -184,7 +184,7 @@ class QuizViewer:
 
     def move(self, step):
         # In Stufe 4 blockieren wir den Rückwärtsschritt
-        self.txt_feedback1.set_text(f"Nächste Frage: \n             \n               ")
+        self.txt_feedback1.set_text(f"steht an ...      \n             \n               ")
         if self.level == 4 and step < 0:
             return 
         if len(self.current_pool) > 0:
