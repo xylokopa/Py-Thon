@@ -1,4 +1,4 @@
-# Quiz-Viewer_16.py 27-05-26 Idee R.Wurdack 212_Zeilen-Script Google-Gemini
+# Quiz-Viewer_16.py 27-05-26 Idee R.Wurdack 213_Zeilen-Script Google-Gemini
 import matplotlib.pyplot as plt
 from matplotlib.widgets import TextBox, Button
 import random
@@ -28,7 +28,7 @@ class QuizViewer:
         self.load_index = load_index
         self.startzeile = startzeile
         self.num_to_pick = min(len(quiz_data), 155)      # 152
-        self.level = 0 # 0,1=Geloest, 2=Zufall, 3=Streng, 4=Kein Zurück!
+        self.level = 0 # 0=geloest ,1=Linear, 2=Zufall, 3=Streng, 4=Kein Zurück!
         self.index = 0
         self.guess = "?"
         self.show_answer = False
@@ -40,31 +40,31 @@ class QuizViewer:
         self.bad = []
         self.current_pool = []
         self.fig, self.ax = plt.subplots(figsize=(11, 5.5))
-        plt.subplots_adjust(left=0.01, bottom=0.05)                                                                #01
+        plt.subplots_adjust(left=0.01, bottom=0.05)                                                            #01
         self.ax.axis('off')
         self.txt_q = self.ax.text(0.01, 0.99, "", va='top', fontsize=11, family='monospace')
-        self.txt_feedback = self.ax.text(0.17, 0.15, "",va='top',fontsize=12,fontweight='bold')                    #02
+        self.txt_feedback = self.ax.text(0.17, 0.15, "",va='top',fontsize=12,fontweight='bold')                #02
         self.txt_feedback.set_text(f"Antwort steht an ...      \n             \n               ")       
-        self.txt_score1 = self.ax.text(0.40, 0.99, "",va='top',fontsize=13,color='darkblue',fontweight='bold')     #03
-        self.txt_score2 = self.ax.text(0.01, 0.00, "", va='top', fontsize=13, color='magenta' )                    #04
+        self.txt_score1 = self.ax.text(0.50, 0.99, "",va='top',fontsize=13,color='darkblue',fontweight='bold') #03
+        self.txt_score2 = self.ax.text(0.01, 0.00, "", va='top', fontsize=13, color='magenta' )                #04
         # Antwort-Buttons
         self.btn_choices = []
         for i, label in enumerate(['a', 'b', 'c', 'd']):
-            ax_c = plt.axes([0.655, 0.235 - (i * 0.06), 0.04, 0.05])                                               #05
+            ax_c = plt.axes([0.655, 0.235 - (i * 0.06), 0.04, 0.05])                                           #05
             btn = Button(ax_c, label)
             btn.on_clicked(lambda e, l=label: self.make_guess(l))
             self.btn_choices.append(btn)
         # Navigation mit Buttons
-        self.btn_prev = Button(plt.axes([0.57, 0.102, 0.07, 0.132]), '<<')                                         #06
-        self.btn_num = Button(plt.axes([0.42, 0.172, 0.14, 0.06]), f'Anzahl: {self.num_to_pick}')                  #07
-        self.lvl_txt = ["tafel","geloest","zufall","streng","kein zurueck"]
-        self.btn_lvl = Button(plt.axes([0.42, 0.105, 0.14, 0.06]), f'Modus:{self.lvl_txt[self.level]}')            #08
-        self.btn_next = Button(plt.axes([0.71, 0.102, 0.07, 0.132]), '>>')                                         #09
-        ax_box = self.fig.add_axes([0.01, 0.11, 0.10, 0.06])                                                       #10
+        self.btn_prev = Button(plt.axes([0.57, 0.102, 0.07, 0.132]), '<<')                                     #06
+        self.btn_num = Button(plt.axes([0.42, 0.172, 0.14, 0.06]), f'Fragenzahl : {self.num_to_pick}')         #07
+        self.lvl_txt = ["0 (geloest)","1 (linear)", "2 (Zufall)", "3 (streng)", "4 (kein zurück)"]
+        self.btn_lvl = Button(plt.axes([0.42, 0.105, 0.14, 0.06]), f'Mode {self.lvl_txt[self.level]}')         #08
+        self.btn_next = Button(plt.axes([0.71, 0.102, 0.07, 0.132]), '>>')                                     #09
+        ax_box = self.fig.add_axes([0.01, 0.11, 0.10, 0.06])                                                   #10
         self.text_box = TextBox(ax_box, '', initial=str(startzeile))
         self.text_box.label.set_text('Startzeile:')
         self.text_box.label.set_position((1.3, 1.3))
-        ax_btn = self.fig.add_axes([0.12, 0.11, 0.03, 0.06])                                                       #11
+        ax_btn = self.fig.add_axes([0.12, 0.11, 0.03, 0.06])                                                   #11
         self.btn_submit = Button(ax_btn, 'OK')
         self.text_box.on_submit(self.zeilen_eingabe) # submit-trigger
         self.btn_submit.on_clicked(self.eingabe_absenden)
@@ -116,7 +116,7 @@ class QuizViewer:
     def toggle_level(self, event):
         # Zahlenring 0,1 -> 2 -> 3 -> 4 -> 0
         self.level = (self.level + 1) % 5
-        self.btn_lvl.label.set_text(f'Modus:{self.lvl_txt[self.level]}')
+        self.btn_lvl.label.set_text(f'Mode {self.lvl_txt[self.level]}')
         self.reset_quiz()
 
     def reset_quiz(self):
@@ -127,20 +127,21 @@ class QuizViewer:
         self.erg = 'kein Fehler'
         self.bad = []
         self.index = 0
-        self.txt_feedback.set_text(f"Antwort steht an ...      \n             \n               ")       
+        self.txt_feedback.set_text(f"Antwort steht an ...      \n             \n               ")
+        self.txt_q.set_fontsize(15)
         if self.level == 0:
             self.load_index = 0
             self.startzeile = 1
             self.reload_data(self)
             self.current_pool = self.quiz_data[:self.num_to_pick]
-            self.txt_q.set_fontsize(15)
+            # self.txt_q.set_fontsize(15)
             self.ax.figure.canvas.draw_idle()            
         if self.level == 1:
             self.load_index = 1
             self.startzeile = 1
             self.reload_data(self)
             self.current_pool = self.quiz_data[:self.num_to_pick]
-            self.txt_q.set_fontsize(11)
+            # self.txt_q.set_fontsize(11)
             self.ax.figure.canvas.draw_idle()            
         elif self.level == 2:
             self.load_index = 0
@@ -172,9 +173,9 @@ class QuizViewer:
 
     def update_display(self):
         item = self.current_pool[self.index]
-        lvl_names = ["Tafel_0","Geloest_1", "Zufall_2", "Streng_3", "KEIN ZURUECK!_4"]
+        lvl_names = ["0 (geloest)","1 (linear)", "2 (Zufall)", "3 (streng)", "4 (kein zurück)"]
         mode_text = lvl_names[self.level]
-        self.txt_q.set_text(f"Modus:{mode_text}|Frage {self.index+1}/{len(self.current_pool)}\n\n"+"\n".join(item['q_lines']))
+        self.txt_q.set_text(f"Mode {mode_text}|Frage {self.index+1}/{len(self.current_pool)}\n\n"+"\n".join(item['q_lines']))
         self.txt_score1.set_text(f"richtig: {self.score} von {len(self.current_pool)}")
         self.bad = sorted(list(self.answered_bad))
         self.erg = "/".join(f"{z:03d}" for z in self.bad)
