@@ -1857,3 +1857,63 @@ Q_155. What does int("abc", 16) return?
 -
 -
 -
+-
+Q_156. Which of the following is a regex module function 
+-      that finds ALL non-overlapping matches? 
+- Assume that the re module has been imported.
+-
+- (a) re.match
+- (b) re.findall
+- (c) re.search
+- (d) re.split
+-
+-
+-
+-
+Q_157. Which module provides operating-system-level functionality 
+-      like listing directory contents?
+-
+- (a) sys
+- (b) io
+- (c) os
+- (d) pathlib
+-
+-
+-
+-
+-
+Q_158. What does pickle.dump(obj, f) do? 
+- Assume that the pickle module has been imported.
+-
+- (a) Prints obj.
+- (b) Returns obj as a string.
+- (c) Writes obj to the open binary file f.
+- (d) Reads obj from f.
+-
+-
+-
+-
+-
+Q_159. What does int("101", 2) return? 
+-
+- (a) ValueError
+- (b) 202
+- (c) None
+- (d) 5
+-
+-
+-
+-
+-
+-
+Q_160. What does int("16", 16) return? 
+-
+- (a) None
+- (b) 202
+- (c) ValueError
+- (d) 22
+-
+-
+-
+-
+-
