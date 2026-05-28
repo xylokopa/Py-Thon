@@ -27,8 +27,8 @@ class QuizViewer:
         self.quiz_data = quiz_data
         self.load_index = load_index
         self.startzeile = startzeile
-        self.num_to_pick = min(len(quiz_data), 155)      # 152
-        self.level = 0 # 0=geloest ,1=Linear, 2=Zufall, 3=Streng, 4=Kein Zurück!
+        self.num_to_pick = min(len(quiz_data), 160)      # 152
+        self.level = 0 # 0=gelöst ,1=Linear, 2=Zufall, 3=Streng, 4=Kein Zurück!
         self.index = 0
         self.guess = "?"
         self.show_answer = False
@@ -57,7 +57,7 @@ class QuizViewer:
         # Navigation mit Buttons
         self.btn_prev = Button(plt.axes([0.57, 0.102, 0.07, 0.132]), '<<')                                     #06
         self.btn_num = Button(plt.axes([0.42, 0.172, 0.14, 0.06]), f'Fragenzahl : {self.num_to_pick}')         #07
-        self.lvl_txt = ["0 (geloest)","1 (linear)", "2 (Zufall)", "3 (streng)", "4 (kein zurück)"]
+        self.lvl_txt = ["0 (gelöst)","1 (linear)", "2 (Zufall)", "3 (streng)", "4 (kein zurück)"]
         self.btn_lvl = Button(plt.axes([0.42, 0.105, 0.14, 0.06]), f'Mode {self.lvl_txt[self.level]}')         #08
         self.btn_next = Button(plt.axes([0.71, 0.102, 0.07, 0.132]), '>>')                                     #09
         ax_box = self.fig.add_axes([0.01, 0.11, 0.10, 0.06])                                                   #10
@@ -173,7 +173,7 @@ class QuizViewer:
 
     def update_display(self):
         item = self.current_pool[self.index]
-        lvl_names = ["0 (geloest)","1 (linear)", "2 (Zufall)", "3 (streng)", "4 (kein zurück)"]
+        lvl_names = ["0 (gelöst)","1 (linear)", "2 (Zufall)", "3 (streng)", "4 (kein zurück)"]
         mode_text = lvl_names[self.level]
         self.txt_q.set_text(f"Mode {mode_text}|Frage {self.index+1}/{len(self.current_pool)}\n\n"+"\n".join(item['q_lines']))
         self.txt_score1.set_text(f"richtig: {self.score} von {len(self.current_pool)}")
