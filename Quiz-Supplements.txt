@@ -1,0 +1,496 @@
+https://www.sanfoundry.com/1000-python-questions-answers/
+
+8a. Which of the following is used to define a block of code in Python language?
+a) Indentation
+b) Key
+c) Brackets
+d) All of the mentioned
+
+11b. What will be the output of the following Python code?
+i = 1
+while True:
+    if i%3 == 0:
+        break
+    print(i)
+    i + = 1
+a) 1 2 3
+b) SyntaxError
+c) 1 2
+d) none of the mentioned
+Answer: b
+Explanation: The output will be a SyntaxError because i + = 1 is invalid syntax in Python. 
+There should be no space between + and =. The correct syntax is i += 1.
+
+14d. What is the order of precedence in python?
+a) Exponential, Parentheses, Multiplication, Division, Addition, Subtraction
+b) Exponential, Parentheses, Division, Multiplication, Addition, Subtraction
+c) Parentheses, Exponential, Multiplication, Addition, Division, Subtraction
+d) Parentheses, Exponential, Multiplication, Division, Addition, Subtraction
+Answer: d
+Explanation: Python follows the PEMDAS rule (similar to BODMAS): 
+Parentheses, Exponentiation, Multiplication/Division, then Addition/Subtraction. 
+Operators at the same level are evaluated left to right.
+
+15a. What will be the output of the following Python code snippet if x=1?
+x<<2
+a) 4
+b) 2
+c) 1
+d) 8
+Answer: a
+Explanation: The binary form of 1 is 0001. The expression x<<2 implies we are performing 
+bitwise left shift on x. This shift yields the value: 0100, which is the binary form of 4.
+
+17b. Which of the following is true for variable names in Python?
+a) underscore and ampersand are the only two special characters allowed
+b) unlimited length
+c) all private members must have leading and trailing underscores
+d) none of the mentioned
+Answer: b
+Explanation: Python allows variable names of unlimited length. Private members usually have 
+only a leading underscore, not both leading and trailing. The ampersand (&) is not permitted 
+in variable names; only the underscore (_) is allowed as a special character.
+
+18a. What are the values of the following Python expressions?
+print(2**(3**2))
+print((2**3)**2)
+print(2**3**2)
+a) 512, 64, 512
+b) 512, 512, 512
+c) 64, 512, 64
+d) 64, 64, 64
+Answer: a
+Explanation: Expression 1 is evaluated as: 2**9, which is equal to 512. Expression 2 is evaluated 
+as 8**2, which is equal to 64. The last expression is evaluated as 2**(3**2). This is because the 
+associativity of ** operator is from right to left. Hence the result of the third expression is 512.
+
+19b. Which of the following is the truncation division operator in Python?
+a) |
+b) //
+c) /
+d) %
+Answer: b
+Explanation: // is the operator for truncation division. It is called so because it returns only 
+the integer part of the quotient, truncating the decimal part. For example: 20//3 = 6.
+
+20c. What will be the output of the following Python code?
+l=[1, 0, 2, 0, 'hello', '', []]
+print(list(filter(bool, l)))
+a) [1, 0, 2, ‘hello’, ”, []]
+b) Error
+c) [1, 2, ‘hello’]
+d) [1, 0, 2, 0, ‘hello’, ”, []]
+Answer: c
+Expl: The function filter(bool, l) removes all false elements from the list l, such as 0, ”, and []. 
+The remaining true elements — 1, 2, and ‘hello’ — are returned as a new list.
+
+21b. Which of the following functions is a built-in function in python?
+a) factorial()
+b) print()
+c) seed()
+d) sqrt()
+Answer: b
+Expl: The function seed is a function which is present in the random module. The functions sqrt and 
+factorial are a part of the math module. The print function is a built-in function which prints a 
+value directly to the system output.
+
+22b. Which of the following is the use of id() function in python?
+a) Every object doesn’t have a unique id
+b) Id returns the identity of the object
+c) All of the mentioned
+d) None of the mentioned
+Answer: b
+Expl: The id() function in Python returns the identity of an object. This identity is a unique integer 
+(or memory address) that remains constant for the object during its lifetime. Every object in Python 
+has a unique id, which helps in comparing object references.
+
+23a. The following python program can work with ____ parameters.
+def f(x):
+    def f1(*args, **kwargs):
+           print("Sanfoundry")
+           return x(*args, **kwargs)
+    return f1
+a) any number of
+b) 0
+c) 1
+d) 2
+Answer: a
+Explanation: The decorator function f defines f1 which uses *args and **kwargs to accept any number of 
+positional and keyword arguments. This allows the decorated function to work with any number of parameters, 
+making the decorator flexible.
+
+24d. What will be the output of the following Python function?
+print(min(max(False,-3,-4), 2,7))
+a) -4
+b) -3
+c) 2
+d) False
+Answer: d
+Explanation: The max(False, -3, -4) evaluates to 0 because False is treated as 0, and 0 is greater than -3 and -4. 
+Then, min(0, 2, 7) returns 0. Since 0 is equivalent to False, the output is False.
+
+25c. Which of the following is not a core data type in Python programming?
+a) Tuples
+b) Lists
+c) Class
+d) Dictionary
+Answer: c
+Explanation: Class is a user-defined data type.
+
+26d. What will be the output of the following Python expression if x=56.236?
+print("%.2f"%x)
+a) 56.236
+b) 56.23
+c) 56.0000
+d) 56.24
+Answer: d
+Explanation: The expression shown above rounds off the given number to the number of decimal places specified. 
+Since the expression given specifies rounding off to two decimal places, the output of this expression will be 56.24. 
+Had the value been x=56.234 (last digit being any number less than 5), the output would have been 56.23.
+
+27b. Which of these is the definition for packages in Python?
+a) A set of main modules
+b) A folder of python modules
+c) A number of files containing Python definitions and statements
+d) A set of programs making use of Python modules
+Answer: b
+Expl: In Python, a package is defined as a folder containing multiple Python modules, along with a special __init__.py 
+file that indicates the directory is a package. Packages help in organizing related modules into a single directory 
+hierarchy, making the codebase more modular and manageable.
+
+28c. What will be the output of the following Python function?
+print(len(["hello",2, 4, 6]))
+a) Error
+b) 6
+c) 4
+d) 3
+Answer: c
+Expl: The len() function returns the number of elements in the list, regardless of their types. In this case, the list 
+[“hello”, 2, 4, 6] contains four elements, so len() returns 4.
+
+29d. What will be the output of the following Python code?
+x = 'abcd'
+for i in x:
+    print(i.upper())
+a)
+a
+B
+C
+D
+b) a b c d
+c) error
+d)
+A
+B
+C
+D
+Answer: d
+Expl: In this code, x = ‘abcd’ is iterated over, and for each character i, i.upper() is called. The upper() method 
+returns a new string where all characters are converted to uppercase. Each uppercase character is then printed on a 
+new line. Therefore, the output is A, B, C, D, one per line.
+
+30c. What is the order of namespaces in which Python looks for an identifier?
+a) Python first searches the built-in namespace, then the global namespace and finally the local namespace
+b) Python first searches the built-in namespace, then the local namespace and finally the global namespace
+c) Python first searches the local namespace, then the global namespace and finally the built-in namespace
+d) Python first searches the global namespace, then the local namespace and finally the built-in namespace
+Answer: c
+Expl: When Python encounters an identifier (like a variable or function name), it follows the LEGB rule to resolve it. 
+It first looks in the Local namespace (inside the current function), then in the Enclosing namespace (if it’s a nested 
+function), followed by the Global namespace (top-level of the module), and finally the Built-in namespace (predefined 
+functions like len(), sum(), etc.). So, the correct search order for namespaces is: local → global → built-in.
+
+31a. What will be the output of the following Python code snippet?
+for i in [1, 2, 3, 4][::-1]:
+    print(i, end=' ')
+a) 4 3 2 1
+b) error
+c) 1 2 3 4
+d) none of the mentioned
+Answer: a
+Expl: The expression [1, 2, 3, 4][::-1] uses slicing with a step of -1 to reverse the list. So the list becomes [4, 3, 2, 1]. 
+The for loop iterates over this reversed list and prints each element, with end=’ ‘ ensuring the output is on one line with 
+spaces in between.
+
+32b. What will be the output of the following Python statement?
+print("a"+"bc")
+a) bc
+b) abc
+c) a
+d) bca
+Answer: b
+Expl: In Python, the + operator is used for string concatenation. “a” + “bc” joins the two strings together into a single 
+string “abc”.
+
+33d. Which function is called when the following Python program is executed?
+f = foo()
+format(f)
+a) str()
+b) format()
+c) __str__()
+d) __format__()
+Answer: d
+Expl: When format(f) is executed, Python internally invokes the special method f.__format__(). This method controls how 
+the object is formatted. The __str__() method is used by str(f), not format(f).
+
+34b. Which one of the following is not a keyword in Python language?
+a) pass
+b) eval
+c) assert
+d) nonlocal
+Answer: b
+Explanation: eval can be used as a variable.
+
+35a. What will be the output of the following Python code?
+class tester:
+    def __init__(self, id):
+        self.id = str(id)
+        id="224"
+temp = tester(12)
+print(temp.id)
+a) 12
+b) 224
+c) None
+d) Error
+Answer: a
+Expl: When the tester class is instantiated with temp = tester(12), the __init__ method is called. The id argument 
+is passed as 12, and inside the __init__ method, self.id is assigned the string value of id, which is “12”. However, 
+the local variable id is reassigned to “224”, but this change does not affect self.id, which retains the value “12”.
+
+36d. What will be the output of the following Python program?
+def foo(x):
+    x[0] = ['def']
+    x[1] = ['abc']
+    return id(x)
+q = ['abc', 'def']
+print(id(q) == foo(q))
+a) Error
+b) None
+c) False
+d) True
+Answer: d
+Expl: The list q is passed by reference to the function foo, so both x and q refer to the same object in memory. 
+The id() function returns the memory address of the object, which remains unchanged. Therefore, id(q) == foo(q) 
+evaluates to True.
+
+37b. Which module in the python standard library parses options received from the command line?
+a) getarg
+b) getopt
+c) main
+d) os
+Answer: b
+Explanation: The getopt module in Python’s standard library is used to parse command-line options and arguments. 
+It allows the script to accept flags and parameters (like -h or –help) similar to those in shell scripts. 
+For example:
+import getopt, sys
+opts, args = getopt.getopt(sys.argv[1:], "h", ["help"])
+This line parses short option -h and long option –help.
+
+38c. What will be the output of the following Python program?
+z=set('abc')
+z.add('san')
+z.update(set(['p', 'q']))
+print(z)
+a) {‘a’, ‘c’, ‘c’, ‘p’, ‘q’, ‘s’, ‘a’, ‘n’}
+b) {‘abc’, ‘p’, ‘q’, ‘san’}
+c) {‘a’, ‘b’, ‘c’, ‘p’, ‘q’, ‘san’}
+d) {‘a’, ‘b’, ‘c’, [‘p’, ‘q’], ‘san}
+Answer: c
+Explanation: The code shown first adds the element ‘san’ to the set z. The set z is then updated and two more 
+elements, namely, ‘p’ and ‘q’ are added to it. Hence the output is: {‘a’, ‘b’, ‘c’, ‘p’, ‘q’, ‘san’}
+
+39b. What arithmetic operators cannot be used with strings in Python?
+a) *
+b) –
+c) +
+d) All of the mentioned
+Answer: b
+Explanation: + is used to concatenate and * is used to multiply strings.
+
+40a. What will be the output of the following Python code?
+print("abc. DEF".capitalize())
+a) Abc. def
+b) abc. def
+c) Abc. Def
+d) ABC. DEF
+Answer: a
+Expl: The first letter of the string is converted to uppercase and the others are converted to lowercase.
+
+41d. Which of the following statements is used to create an empty set in Python?
+a) ( )
+b) [ ]
+c) { }
+d) set()
+Answer: d
+Explanation: { } creates a dictionary not a set. Only set() creates an empty set.
+
+42a. What will be the value of ‘result’ in following Python program?
+list1 = [1,2,3,4]
+list2 = [2,4,5,6]
+list3 = [2,6,7,8]
+result = list()
+result.extend(i for i in list1 if i not in (list2+list3) and i not in result)
+result.extend(i for i in list2 if i not in (list1+list3) and i not in result)
+result.extend(i for i in list3 if i not in (list1+list2) and i not in result)
+print(result)
+a) [1, 3, 5, 7, 8]
+b) [1, 7, 8]
+c) [1, 2, 4, 7, 8]
+d) error
+Answer: a
+Expl: Here, ‘result’ is a list which is extending three times. When first time ‘extend’ function is called 
+for ‘result’, the inner code generates a generator object, which is further used in ‘extend’ function. This 
+generator object contains the values which are in ‘list1’ only (not in ‘list2’ and ‘list3’).
+Same is happening in second and third call of ‘extend’ function in these generator object contains values only 
+in ‘list2’ and ‘list3’ respectively.
+So, ‘result’ variable will contain elements which are only in one list (not more than 1 list).
+
+43c. To add a new element to a list we use which Python command?
+a) list1.addEnd(5)
+b) list1.addLast(5)
+c) list1.append(5)
+d) list1.add(5)
+Answer: c
+Explanation: We use the function append to add an element to the list.
+
+44b. What will be the output of the following Python code?
+print('*', "abcde".center(6), '*', sep='')
+a) *  abcde *
+b) *abcde *
+c) * abcde*
+d) * abcde  *
+Answer: b
+Explanation: Padding is done towards the right-hand-side first when the final string is of even length.
+
+45c. What will be the output of the following Python code?
+list1 = [1, 3]
+list2 = list1
+list1[0] = 4
+print(list2)
+a) [1, 4]
+b) [1, 3, 4]
+c) [4, 3]
+d) [1, 3]
+Answer: c
+Expl: In the code, list2 = list1 creates a reference to the same list in memory. So when list1[0] is 
+changed to 4, list2 also reflects that change. The output is [4, 3].
+
+46c. Which one of the following is the use of function in python?
+a) Functions don’t provide better modularity for your application
+b) you can’t also create your own functions
+c) Functions are reusable pieces of programs
+d) All of the mentioned
+Answer: c
+Expl: Functions are reusable pieces of programs. They allow you to give a name to a block of statements, 
+allowing you to run that block using the specified name anywhere in your program and any number of times.
+
+47b. Which of the following Python statements will result in the output: 6?
+A = [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]]
+a) A[2][1]
+b) A[1][2]
+c) A[3][2]
+d) A[2][3]
+Answer: b
+Expl: The output required is 6, that is, row 2, item 3. This position is represented by the statement: A[1][2].
+
+48d. What is the maximum possible length of an identifier in Python?
+a) 79 characters
+b) 31 characters
+c) 63 characters
+d) none of the mentioned
+Answer: d
+Explanation: In Python, identifiers can be of any length. There is no fixed maximum, though extremely long names 
+are not practical.
+
+49c. What will be the output of the following Python program?
+i = 0
+while i < 5:
+    print(i)
+    i += 1
+    if i == 3:
+        break
+else:
+    print(0)
+a) error
+b)
+0
+1
+2
+3
+0
+c)
+0
+1
+2
+d) none of the mentioned
+Answer: c
+Expl: the while loop iterates from i = 0 to i = 2, printing the values of i. When i becomes 3, the if i == 3 condition 
+is met, and the break statement is executed, which terminates the loop early. Since the loop was terminated using break, 
+the else block is not executed. Therefore, the output is 0, 1, and 2.
+
+50d. What will be the output of the following Python code?
+x = 'abcd'
+for i in range(len(x)):
+    print(i)
+a) error
+b) 1 2 3 4
+c) a b c d
+d) 0 1 2 3
+Answer: d
+Explanation: i takes values 0, 1, 2 and 3.
+
+51c. What are the two main types of functions in Python?
+a) System function
+b) Custom function
+c) Built-in function & User defined function
+d) User function
+Answer: c
+Expl: Built-in functions and user defined ones. The built-in functions are part of the Python language. 
+Examples are: dir(), len() or abs(). The user defined functions are functions created with the def keyword.
+
+52a. What will be the output of the following Python program?
+def addItem(listParam):
+    listParam += [1]
+mylist = [1, 2, 3, 4]
+addItem(mylist)
+print(len(mylist))
+a) 5
+b) 8
+c) 2
+d) 1
+Answer: a
+Expl: The function addItem uses += [1] to modify the list passed to it. Since lists are mutable and passed 
+by reference, mylist is modified directly. After appending 1, it becomes [1, 2, 3, 4, 1], so its length is 5.
+
+53d. Which of the following is a Python tuple?
+a) {1, 2, 3}
+b) {}
+c) [1, 2, 3]
+d) (1, 2, 3)
+Answer: d
+Expl: A tuple in Python is an immutable sequence type and is defined using round brackets ( ). 
+For example, (1, 2, 3) is a tuple.
+
+54b. What will be the output of the following Python code snippet?
+z=set('abc$de')
+print('a' in z)
+a) Error
+b) True
+c) False
+d) No output
+Answer: b
+Expl: The code shown above is used to check whether a particular item is a part of a given set or not. 
+Since ‘a’ is a part of the set z, the output is true. Note that this code would result in an error in 
+the absence of the quotes.
+
+55d. What will be the output of the following Python expression?
+print(round(4.576))
+a) 4
+b) 4.6
+c) 5
+d) 4.5
+Answer: c
+Expl: The round() function rounds the number to the nearest integer by default. Since 4.576 is closer 
+to 5 than 4, round(4.576) returns 5. Therefore, the output is 5.

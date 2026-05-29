@@ -1,15 +1,19 @@
-# 5_Quiz-ChiQuad-Gleichverteiler.py
+# 6_Stochastischer-b-Ziehungs-Quiz.py  RWu 29-05-2026
 from collections import Counter
-import math
 import os
+import math
 import random
 from datetime import datetime
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Slider, Button
+from highlight_text import ax_text
 
 # --- 1. DATEN AUS TEXTDATEI EINLESEN ---
 dateiname = "antworten.txt"
 raw_answers = []
+# infoboxen für beste_wahl in locals() vormerken
+if 'infoboxen' not in locals():
+    infoboxen = [None] * 4
 
 if os.path.exists(dateiname):
     with open(dateiname, "r", encoding="utf-8") as file:
@@ -21,15 +25,14 @@ else:
         [f"A_{str(i).zfill(3)}.a" for i in range(1, 21)] +
         [f"A_{str(i).zfill(3)}.b" for i in range(21, 41)] +
         [f"A_{str(i).zfill(3)}.c" for i in range(41, 61)] +
-        [f"A_{str(i).zfill(3)}.d" for i in range(61, 81)] + # 1. & 2. Viertel (Gleichverteilt)
+        [f"A_{str(i).zfill(3)}.d" for i in range(61, 81)] + # 1. & 2. Viertel
         [f"A_{str(i).zfill(3)}.b" for i in range(81, 141)] +
         [f"A_{str(i).zfill(3)}.a" for i in range(141, 146)] +
         [f"A_{str(i).zfill(3)}.c" for i in range(146, 151)] +
-        [f"A_{str(i).zfill(3)}.d" for i in range(151, 156)]   # Letztes Viertel (Massiver b-Überhang)
+        [f"A_{str(i).zfill(3)}.d" for i in range(151, 156)]   # Letztes Viertel (Viel b)
     )
 
 # Parsen der Daten in Tuples: (Fragen-Nummer, Antwort-Buchstabe)
-# Beispiel: "A_001.b" -> ("001", "b")
 parsed_data = []
 for line in raw_answers:
     if "." in line and "_" in line:
@@ -37,7 +40,7 @@ for line in raw_answers:
         letter = parts[-1]
         num = parts[0].split("_")[-1]
         parsed_data.append((num, letter))
-    elif "." in line: # Fallback falls kein Unterstrich existiert
+    elif "." in line:
         parts = line.split(".")
         letter = parts[-1]
         parsed_data.append(("???", letter))
@@ -53,21 +56,16 @@ q1_data = parsed_data[:math.ceil(quarter_size)]
 q2_data = parsed_data[math.ceil(quarter_size):math.floor(quarter_size * 2)]
 q4_data = parsed_data[math.ceil(quarter_size * 3):]
 
-# --- 2. HILFSFUNKTION: ABWEICHUNG ZUR GLEICHVERTEILUNG BERECHNEN ---
-def berechne_ungleichgewicht(sample):
-    """ Berechnet die quadratische Abweichung zur perfekten Gleichverteilung """
+# --- 2. HILFSFUNKTION: ANTEIL DER OPTION 'B' BERECHNEN ---
+def berechne_b_anteil(sample):
+    """ Berechnet, wie viel Prozent der Antworten in der Stichprobe 'b' sind """
+    if not sample:
+        return 0
     counts = Counter([item[1] for item in sample])
-    n = len(sample)
-    ideal = n / 4.0
-    
-    quadratische_abweichung = 0
-    for cat in ["a", "b", "c", "d"]:
-        quadratische_abweichung += (counts[cat] - ideal) ** 2
-    return quadratische_abweichung
+    return counts["b"] / len(sample)
 
 # --- 3. GRAFISCHE OBERFLÄCHE EINRICHTEN ---
 fig, axes = plt.subplots(1, 4, figsize=(16, 7), sharey=True)
-# Platz nach unten für Slider, Button UND Text-Ausgabe vergrößert
 plt.subplots_adjust(bottom=0.42)  
 
 categories = ["a", "b", "c", "d"]
@@ -75,7 +73,7 @@ colors = ["#4A90E2", "#50E3C2", "#F5A623", "#D0021B"]
 
 bar_containers = []
 text_elements = []
-info_texts = [] # Für die Anzeige der Fragen-Nummern unter den Plots
+info_texts = [] 
 
 # --- 4. INTERAKTIVE UPDATE-FUNKTION ---
 def update(val):
@@ -93,26 +91,23 @@ def update(val):
         ax = axes[i]
         current_size = min(sample_size, len(full_data))
 
-        best_sample = None
-        best_score = float('inf')
+        best_b_sample = None
+        max_b_score = -1.0
         all_sampled_letters = []
 
-        # Wir simulieren k Ziehungen und suchen die "beste" (fairste) Stichprobe heraus
+        # Wir simulieren k Ziehungen und suchen die Stichprobe mit dem MAXIMALEN 'b'-Anteil
         for _ in range(iterations):
             if current_size > 0:
-                # Ziehen ohne Zurücklegen pro Einzeldurchgang, um echte Kombis zu simulieren
-                # (Falls current_size > len(full_data), nehmen wir max. verfügbare Menge)
                 k_size = min(current_size, len(full_data))
                 current_sample = random.sample(full_data, k=k_size)
                 
-                # Alle gezogenen Buchstaben für das Gesamt-Histogramm sammeln
                 all_sampled_letters.extend([item[1] for item in current_sample])
                 
-                # Prüfen, ob diese Stichprobe der Gleichverteilung am nächsten liegt
-                score = berechne_ungleichgewicht(current_sample)
-                if score < best_score:
-                    best_score = score
-                    best_sample = current_sample
+                # Maximierung des b-Anteils
+                score = berechne_b_anteil(current_sample)
+                if score > max_b_score:
+                    max_b_score = score
+                    best_b_sample = current_sample
 
         total_sampled = len(all_sampled_letters)
         counts = Counter(all_sampled_letters)
@@ -146,31 +141,46 @@ def update(val):
             )
             text_elements[i].append(txt)
 
-        # 4. Ausgabe-Text für die "fairste" Stichprobe aktualisieren
-        if best_sample:
-            # Sortiere die Fragenummern aufsteigend für bessere Lesbarkeit
-            best_numbers = sorted([item[0] for item in best_sample])
-            # Formatierung: Max 5 Nummern pro Zeile, damit es ins Layout passt
+        # 4. Ausgabe-Text für die "maximale b-Günstigung"
+        if best_b_sample:
+            # Nur die Fragenummern extrahieren und sortieren
+            best_numbers = sorted([item[0] for item in best_b_sample])
             chunks = [best_numbers[x:x+5] for x in range(0, len(best_numbers), 5)]
             formatted_text = "\n".join(["/".join(chunk) for chunk in chunks])
+            eff_anteil = max_b_score * 100
         else:
             formatted_text = "Keine Daten"
+            effektiver_anteil = 0.0
             
-        info_texts[i].set_text(f"Beste stochastische\nKombi (n={current_size}):\n{formatted_text}")
-
-    fig.canvas.draw_idle()
+        beste_wahl = f"\n\n davon beste Wahl\n({eff_anteil:.0f}% bei n={current_size}):\n{formatted_text}"
+        # infoboxen für beste_wahl löschen           
+        if infoboxen[i] is not None:
+               infoboxen[i].remove()
+               infoboxen[i] = None
+        # Text als Text-Objekt zeichnen und in per annotate ausgeben           
+        infoboxen[i] = ax.annotate(
+             beste_wahl,
+             xy=(0.10, 0.00),          # Deine Position im Diagramm
+             xycoords="axes fraction", # Koordinaten von 0 bis 1 relativ zur Achse
+             va="top",
+             fontsize=11,
+             fontweight="bold",
+             # Das hier ist die Magie: Es aktiviert Markdown für diesen Text!
+             bbox=dict(boxstyle="round,pad=0.3", fc="none", ec="none"), 
+        )  
+    fig.canvas.draw_idle() 
 
 # --- 5. SPEICHER-FUNKTION ---
 def save_report(event):
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    ausgabe_name = f"exp-verteilung_{timestamp}.png"
+    ausgabe_name = f"maximale_b_ausbeute_{timestamp}.png"
     
     ax_size.set_visible(False)
     ax_iter.set_visible(False)
     ax_button.set_visible(False)
     
     plt.savefig(ausgabe_name, dpi=300, bbox_inches='tight')
-    print(f"[ERFOLG] experiment gespeichert unter: {ausgabe_name}")
+    print(f"[ERFOLG] b-Ziehungs-Analyse gespeichert unter: {ausgabe_name}")
     
     ax_size.set_visible(True)
     ax_iter.set_visible(True)
@@ -180,7 +190,7 @@ def save_report(event):
 # --- 6. INITIALISIERUNG DER DIAGRAMME UND TEXTFELDER ---
 for i, _ in enumerate(axes):
     ax = axes[i]
-    bars = ax.bar(categories, [0,0,0,0], color=colors[i], edgecolor="black")
+    bars = ax.bar(categories, [0, 0, 0, 0], color=colors[i], edgecolor="black")
     bar_containers.append(bars)
     text_elements.append([])
     
@@ -189,15 +199,12 @@ for i, _ in enumerate(axes):
     if i == 0:
         ax.set_ylabel("Anteil (%)", fontsize=12)
         
-    # Textfeld unterhalb des jeweiligen Plots platzieren
-    # Nutzen von relativen Achsen-Koordinaten (y < 0 platziert Text unter die X-Achse)
     t = ax.text(0.5, -0.22, "", transform=ax.transAxes, ha="center", va="top",
-                fontsize=9, color="#2C3E50", style='italic',
-                bbox=dict(boxstyle="round,pad=0.5", facecolor="#F8F9F9", edgecolor="#BDC3C7"))
+                fontsize=9, color="#7F8C8D", style='italic',
+                bbox=dict(boxstyle="round,pad=0.5", facecolor="#FDEDEC", edgecolor="#F5B7B1")) # Rötliche Box für Alarm-Modus
     info_texts.append(t)
 
-# --- 7. STEUERELEMENTE (SLIDER & BUTTON) PLATZIEREN ---
-# Weiter nach unten verschoben, um Kollisionen mit dem Text zu vermeiden
+# --- 7. STEUERELEMENTE PLATZIEREN ---
 ax_size = plt.axes([0.25, 0.12, 0.45, 0.03])
 slider_size = Slider(ax=ax_size, label="Stichprobengröße (n)  ", valmin=10, valmax=20, valinit=15, valfmt="%1.0f", color="purple")
 
@@ -208,7 +215,7 @@ slider_size.on_changed(update)
 slider_iter.on_changed(update)
 
 ax_button = plt.axes([0.78, 0.05, 0.12, 0.10])
-btn_save = Button(ax=ax_button, label="Näherung\nspeichern", color="#27AE60", hovercolor="#2ECC71") # Grün für Ehrenrettung
+btn_save = Button(ax=ax_button, label="Näherung\nspeichern", color="#8F8F8F", hovercolor="#F00F2B") # Speicher-Button
 btn_save.label.set_color("white")
 btn_save.label.set_weight("bold")
 btn_save.on_clicked(save_report)
@@ -216,5 +223,5 @@ btn_save.on_clicked(save_report)
 # Startkonfiguration laden
 update(None)
 
-plt.suptitle("Quiz-im-3Vierteltakt: Stochastische Näherung lokaler Gleichverteilungen", fontsize=14, fontweight="bold", y=0.98)
+plt.suptitle("b-Ziehungs-Quiz-im-3Vierteltakt: beste stochastische b-Günstigung", fontsize=14, fontweight="bold", y=0.98)
 plt.show()

@@ -1,4 +1,4 @@
-# 7_Quiz-Branding-by-Interaction.py
+# 7_Quiz-Branding-by-Interaction.py RWu 29-05-2026
 from collections import Counter
 import math
 import os
