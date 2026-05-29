@@ -90,7 +90,7 @@ I_089.a
 I_090.b
 I_091.c
 I_092.b
-I_093.b
+I_093.b : d = {"a":1,"b":2} and e = d.get("c",17) gives 17 as a Fallback, while {"a":1,"b":2}.get("b",0) gives 2 ( Fallback dropped )
 I_094.d
 I_095.b
 I_096.a

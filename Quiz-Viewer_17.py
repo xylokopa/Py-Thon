@@ -26,7 +26,7 @@ def load_data(fragen_file, antworten_file, info_file, start_zeile):
             
     except: return []
     # return main dictionary !
-    return [{"q_lines": q, "ans": a, "inf":inftxt , "id": i} for i, (q, a, inftxt) in enumerate(zip(questions, answers,infos))]
+    return [{"q_lines": q, "ans": a, "inf":inftxt , "id": i+1 } for i, (q, a, inftxt) in enumerate(zip(questions, answers,infos))]
 
 class QuizViewer:
     def __init__(self, quiz_data, load_index, startzeile):
@@ -51,9 +51,9 @@ class QuizViewer:
         self.txt_q = self.ax.text(0.01, 0.99, "", va='top', fontsize=11, family='monospace')
         self.txt_feedback = self.ax.text(0.17, 0.233, "",va='top',fontsize=12,fontweight='bold')               #01
         # self.txt_feedback.set_text(f"Antwort steht an ...      \n             \n               ")       
-        self.txt_score1 = self.ax.text(0.50, 0.99, "",va='top',fontsize=13,color='darkblue',fontweight='bold') #02
-        self.txt_score2 = self.ax.text(0.01, 0.14, "", va='top', fontsize=13, color='magenta' )                #03
-        self.txt_score3 = self.ax.text(0.01, 0.10, "", va='top', fontsize=13, color='darkblue' )               #04
+        self.txt_score1 = self.ax.text(0.50, 0.99, "", va='top',fontsize=13,color='darkblue',fontweight='bold') #02
+        self.txt_score2 = self.ax.text(0.01, 0.14, "", va='top',fontsize=13,color='magenta' )                #03
+        self.txt_score3 = self.ax.text(0.01, 0.10, "", va='top',fontsize=13,color='darkblue' )               #04
         self.txt_score3.set_text(f"info-zeile")
         # Antwort-Buttons
         self.btn_choices = []
