@@ -124,7 +124,7 @@ I_123.a
 I_124.a
 I_125.b
 I_126.b
-I_127.b
+I_127.b : all([True,True,True]) or all([None]) = True  , any([False,True,True]) and not(any([None])) = False
 I_128.a
 I_129.b
 I_130.a
